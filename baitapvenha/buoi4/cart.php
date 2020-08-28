@@ -16,19 +16,22 @@
 	<script>
 	    new WOW().init();
 	</script>
+	<style type="text/css">
+		
+	</style>
 </head>
 <body>
 	<?php session_start(); ?>
 	<div class="container">
 		<h2 class="text-center">--PRODUCTS IN CART--</h2>
-		<a href="index.php" class="btn btn-success">BACK TO HOME</a>
+		<a href="muahang.php" class="btn btn-success">BACK TO HOME</a>
 		<table class="table">
 			<thead>
 				<tr>
 					<th>Code</th>
 					<th>Name</th>
 					<th>Price</th>
-					<th width="200px">Quality</th>
+					<th width="200px;">Quality</th>
 					<th>Amount</th>
 					<th>Image</th>
 				</tr>
@@ -44,9 +47,9 @@
 						<td><?php echo $product['TenSp']; ?></td>
 						<td><?php echo number_format($product['GiaTien']) ?>VND</td>
 						<td>
-							<a class="btn btn-success" href="add2cart.php?msp=<?php echo $product['MaSp'] ?>">+</a>
+							<a class="btn btn-success cong" href="add2cart.php?msp=<?php echo $product['MaSp'] ?>">+</a>
 							<?php echo $product['SoLuong']; ?>
-							<a class="btn btn-danger" href="delete.php?msp=<?php echo $product['MaSp'] ?>">-</a>
+							<a class="btn btn-danger tru" href="delete.php?msp=<?php echo $product['MaSp'] ?>">-</a>
 						</td>
 						<td><?php echo number_format($product['GiaTien'] * $product['SoLuong']); ?></td>
 						<td><img width="10%" height="5%" src="<?php echo $product['Anh'] ?>" alt=""></td>	

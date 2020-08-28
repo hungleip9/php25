@@ -36,7 +36,7 @@
 				<?php $sum = 0; ?>
 				<?php foreach ($_SESSION['products'] as $key => $product) { 
 				$sum += $product['DonGia'] * $product['SoLuong'];
-				$amount 
+				
 				?>
 				<tr>
 					<td><?php echo $product['MaSp']; ?></td>
