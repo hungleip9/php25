@@ -1,12 +1,13 @@
 <?php 
 // var_dump($_GET);
-include 'connect.php';
+include '../helper/connect.php';
 	$id = $_GET['id'];
 	$id = isset($_GET['id'])?$_GET['id']:0;
 $query = "SELECT * FROM categories WHERE id =".$id;
 // echo $query;
 // die();
 //thuc thi cau lenh
+        $conn = connect();
 		$result = $conn->query($query);
 		$category = $result->fetch_assoc();
 
@@ -47,7 +48,7 @@ $query = "SELECT * FROM categories WHERE id =".$id;
             </div>
             <div class="form-group">
                 <label for="">Thumbnail</label>
-                <input type="text" class="form-control" id="" placeholder="" name="thumbnail" value="<?php echo $category['thumbnail'] ?>">
+                <input type="text" class="form-control" id="" placeholder="" name="thumb_nail" value="<?php echo $category['thumb_nail'] ?>">
             </div>
             <div class="form-group">
                 <label for="">Slug</label>

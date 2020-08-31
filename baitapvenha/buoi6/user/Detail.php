@@ -1,18 +1,19 @@
 <?php 
 // var_dump($_GET);
-include 'connect.php';
+include '../helper/connect.php';
 	$id = $_GET['id'];
 	$id = isset($_GET['id'])?$_GET['id']:0;
-$query = "SELECT * FROM user WHERE id =".$id;
+// $query = "SELECT * FROM user WHERE id =".$id;
 // echo $query;
 // die();
 //thuc thi cau lenh
-		$result = $conn->query($query);
-		$user = $result->fetch_assoc();
+        // $conn = connect();
+		// $result = $conn->query($query);
+		// $user = $result->fetch_assoc();
 
 	// print_r($category);
 	// die();
-
+    $user = detail('user',$id);
  ?>
  <!DOCTYPE html>
 <html>

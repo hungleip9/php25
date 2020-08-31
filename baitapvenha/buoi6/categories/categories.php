@@ -1,6 +1,6 @@
 <?php 
 
-include 'connect.php';
+include '../helper/connect.php';
 
 $categories_id=1;
 
@@ -8,17 +8,19 @@ $categories_id=1;
 
 // echo $query;
 
-//thuc thi cau lenh
+// //thuc thi cau lenh
+    
+//     $query = "SELECT * FROM categories";
+//     $conn = connect();
+//     $result = $conn->query($query);
+// //tao 1 mang de lay du lieu
 
-    $query = "SELECT * FROM categories";
-    $result = $conn->query($query);
-//tao 1 mang de lay du lieu
-
-    $categoriess = array();
-        while($row = $result -> fetch_assoc()){
-            $categoriess[] = $row;
-        }
-
+//     $categoriess = array();
+//         while($row = $result -> fetch_assoc()){
+//             $categoriess[] = $row;
+//         }
+include_once '../helper/sql.php';
+$categories = select('categories');
  ?>
  <!DOCTYPE html>
 <html>
@@ -51,12 +53,12 @@ $categories_id=1;
                 <th>Created_at</th>
                 <th>Action</th>
             </thead>
-            <?php foreach ($categoriess as $categories) { ?>
+            <?php foreach ($categories as $categories) { ?>
                 <tr>
                 <td><?php echo $categories['id']; ?></td>
                 <td><?php echo $categories['name']; ?></td>
                 <td><?php echo $categories['parent_id']; ?></td>
-                <td><?php echo $categories['thumbnail']; ?></td>  
+                <td><?php echo $categories['thumb_nail']; ?></td>  
                 <td><?php echo $categories['slug']; ?></td>  
                 <td><?php echo $categories['description']; ?></td>    
                 <td><?php echo $categories['created_at']; ?></td>
@@ -68,7 +70,7 @@ $categories_id=1;
                     <a href="edit.php?id=<?php echo $categories['id']?>" class="btn btn-success">Edit</a>
 
 
-                    <a href="delete.php?id=<?php echo $categories['id']?>" class="btn btn-danger">Delete</a>
+                    <a href="delete_process.php?id=<?php echo $categories['id']?>" class="btn btn-danger">Delete</a>
 
 
 

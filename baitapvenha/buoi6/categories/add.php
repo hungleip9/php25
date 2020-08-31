@@ -30,7 +30,7 @@
             </div>
             <div class="form-group">
                 <label for="">Thumbnail</label>
-                <input type="text" class="form-control" id="" placeholder="" name="thumbnail">
+                <input type="text" class="form-control" id="" placeholder="" name="thumb_nail">
             </div>
             <div class="form-group">
                 <label for="">Slug</label>
