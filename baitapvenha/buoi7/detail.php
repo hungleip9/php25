@@ -79,10 +79,10 @@
 
 
 
-                                <a href="edit.php?id=<?php echo $user['id']?>" class="btn btn-success">Edit</a>
+                                <a href="edit.php?id=<?php echo $post['id']?>" class="btn btn-success">Edit</a>
 
 
-                                 <a href="delete.php?id=<?php echo $user['id']?>" class="btn btn-danger">Delete</a>
+                                 <a href="delete.php?id=<?php echo $post['id']?>" class="btn btn-danger">Delete</a>
 
 
 
