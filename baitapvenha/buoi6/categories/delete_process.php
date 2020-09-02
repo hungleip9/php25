@@ -1,8 +1,8 @@
 <?php 
 	
-	include '../helper/connect.php';
+	include "connect.php";
 
-	$data = $_GET;
+	$data = $_POST;
 
 	$id = $data['id'];
 
@@ -12,7 +12,6 @@
 	// echo $query;
 
 	// die();
-	$conn = connect();
 	$status = $conn->query($query);
 	if ($status) {
 		echo "delete thanh cong";

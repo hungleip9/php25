@@ -1,6 +1,6 @@
 <?php 
 // var_dump($_GET);
-    include '../helper/sql.php';
+    include '../buoi6/helper/sql.php';
     $conn = connect();
 	$id = $_GET['id'];
 	$id = isset($_GET['id'])?$_GET['id']:0;
@@ -13,7 +13,7 @@
 
 	// print_r($category);
 	// die();
-    $user = detail('user',$id);
+    $post = detail('post',$id);
  ?>
  <!DOCTYPE html>
 <html>
@@ -41,29 +41,36 @@
     <hr>
         <form action="Detail_process.php?id=<?php echo $user['id']?>" method="POST" role="form" enctype="multipart/form-data">
         	<input type="hidden" name="id" value="<?php echo $user['id'] ?>">
-        	<a href="user.php" class="btn btn-primary">BACK-TO-HOME</a>
+        	<a href="post.php" class="btn btn-primary">BACK-TO-HOME</a>
             	<table class="table">
             		<thead>
             			
             			<th>ID</th>
-            			<th>Name</th>
-            			<th>Email</th>
+                        <th>Title</th>
+                        <th>Description</th>
 
-            			<th>Avatar</th>
-            			<th>Created_at</th>
-            			<th>Action</th>
+                        <th>Thumbnail</th>
+                        <th>Content</th>
+                        <th>Slug</th>
+                        <th>View_count</th>
+                        <!-- <th>User_id</th> -->
+                        <th>Category_id</th>
+                        <th>Created_at</th>
             			
 
             		</thead>
             		<tbody>
+                    
             			<tr>
-            				<td><?php echo $user['id']; ?></td>
-            				<td><?php echo $user['name']; ?></td>
-            				<td><?php echo $user['email']; ?></td>
-            				<td>
-            					<img src="<?php echo $user['avatar']?>" alt="" style="width: 60px;">
-            				</td>            	
-            				<td><?php echo $user['created_at']; ?></td>
+            				<td><?php echo $post['id']; ?></td>
+                            <td><?php echo $post['title']; ?></td>
+                            <td><?php echo $post['description']; ?></td>
+                            <td><?php echo $post['thumbnail']; ?></td>
+                            <td><?php echo $post['content']; ?></td>  
+                            <td><?php echo $post['slug']; ?></td>
+                            <td><?php echo $post['view_count']; ?></td>
+                            <td><?php echo $post['category_id']; ?></td>            
+                            <td><?php echo $post['created_at']; ?></td>
             				<td>
 
 
@@ -81,6 +88,7 @@
 
             				</td>
             			</tr>
+                        
             		</tbody>
             	</table>
             

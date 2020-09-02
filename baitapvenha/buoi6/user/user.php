@@ -1,19 +1,16 @@
 <?php 
 
-// include '../helper/connect.php';
-
-// $user_id=1;
+include '../helper/sql.php';
+$conn = connect();
+$user_id=1;
 
 // $query ="UPDATE `user` SET `password` = 'hungle' WHERE `user`.`id`=" . $user_id;
 
 // echo $query;
 
-// //thuc thi cau lenh
-
+//thuc thi cau lenh
+    
 // 	$query = "SELECT * FROM user";
-
-//     $conn = connect();
-
 // 	$result = $conn->query($query);
 // //tao 1 mang de lay du lieu
 
@@ -21,8 +18,7 @@
 // 		while($row = $result -> fetch_assoc()){
 // 			$users[] = $row;
 // 		}
-include_once '../helper/sql.php';
-$user = select('user');
+    $user = select('user');
  ?>
  <!DOCTYPE html>
 <html>
@@ -53,12 +49,11 @@ $user = select('user');
                 <th>Created_at</th>
                 <th>Action</th>
             </thead>
-            <?php
-            $i=0;
-             foreach ($user as $user) { 
-                ?>
+            <?php 
+                $i=1;
+            foreach ($user as $user) { ?>
             	<tr>
-            	<td><?php echo $i+1; ?></td>
+            	<td><?php echo $i ?></td>
             	<td><?php echo $user['name']; ?></td>
             	<td><?php echo $user['email']; ?></td>
             	<td>
@@ -73,7 +68,7 @@ $user = select('user');
                     <a href="edit.php?id=<?php echo $user['id']?>" class="btn btn-success">Edit</a>
 
 
-                    <a href="delete_process.php?id=<?php echo $user['id']?>" class="btn btn-danger">Delete</a>
+                    <a href="delete.php?id=<?php echo $user['id']?>" class="btn btn-danger">Delete</a>
 
 
 

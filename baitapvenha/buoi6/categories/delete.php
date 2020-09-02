@@ -1,13 +1,12 @@
 <?php 
 // var_dump($_GET);
-include '../helper/connect.php';
+include 'connect.php';
 	$id = $_GET['id'];
 	$id = isset($_GET['id'])?$_GET['id']:0;
 $query = "SELECT * FROM categories WHERE id =".$id;
 // echo $query;
 // die();
 //thuc thi cau lenh
-        $conn = connect();
 		$result = $conn->query($query);
 		$categories = $result->fetch_assoc();
 
@@ -62,7 +61,7 @@ $query = "SELECT * FROM categories WHERE id =".$id;
             				<td><?php echo $categories['id']; ?></td>
                             <td><?php echo $categories['name']; ?></td>
                             <td><?php echo $categories['parent_id']; ?></td>
-                            <td><?php echo $categories['thumb_nail']; ?></td>  
+                            <td><?php echo $categories['thumbnail']; ?></td>  
                             <td><?php echo $categories['slug']; ?></td>  
                             <td><?php echo $categories['description']; ?></td>    
                             <td><?php echo $categories['created_at']; ?></td>

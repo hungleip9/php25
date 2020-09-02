@@ -1,13 +1,13 @@
 <?php 
 // var_dump($_GET);
 include '../helper/connect.php';
+$conn = connect();
 	$id = $_GET['id'];
 	$id = isset($_GET['id'])?$_GET['id']:0;
 $query = "SELECT * FROM user WHERE id =".$id;
 // echo $query;
 // die();
 //thuc thi cau lenh
-        $conn = connect();
 		$result = $conn->query($query);
 		$user = $result->fetch_assoc();
 
