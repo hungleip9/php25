@@ -1,22 +1,10 @@
 <?php 
-include_once '../helper/sql.php';
+    include_once 'Category.php';
+        $category_object = new Category();
+        $categories = $category_object->getAll();
+    // var_dump($categories);
+    // die();
 
-// $categories_id=1;
-
-// $query ="UPDATE `categories` SET `password` = 'hungle' WHERE `categories`.`id`=" . $categories_id;
-
-// echo $query;
-
-//thuc thi cau lenh
-
-    $query = "SELECT * FROM categories";
-    $result = $conn->query($query);
-//tao 1 mang de lay du lieu
-
-    $categoriess = array();
-        while($row = $result -> fetch_assoc()){
-            $categoriess[] = $row;
-        }
 
  ?>
  <!DOCTYPE html>

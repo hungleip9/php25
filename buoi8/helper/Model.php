@@ -1,11 +1,17 @@
 <?php 
-	// include 'connect.php';
-	include_once 'connect.php';
+include_once "Connection.php";
+	class Model{
+		var $conn;
 
-	function select($table){
-		$conn = connect();
+		function __construct(){
+			$connection = new Connection();
+			$this->conn = $connection->connect();
+		}
+
+		function select($table){
+		
 		$query = "SELECT * FROM $table";
-		$result = $conn->query($query);
+		$result = $this->conn->query($query);
 		//tao 1 mang de lay du lieu
 
 		$data = array();
@@ -19,7 +25,7 @@
 		$query = "SELECT * FROM $table WHERE id =$id";
 		$conn = connect();
 		//thuc thi cau lenh
-		$result = $conn->query($query);
+		$result = $this->conn->query($query);
 		$data = $result->fetch_assoc();
 		return $data;
 
@@ -32,7 +38,7 @@
     	// echo $query;
 
     	// die();
-		$status = $conn->query($query);
+		$status = $this->conn->query($query);
 		
 		return $status;
 	}
@@ -59,7 +65,7 @@
 		// die();
 
 		// $query="INSERT INTO `$table`(`name`, `email`,`avatar`, `created_at`) VALUES ('".$data['name']."','".$data['email']."','".$data['avatar']."','".$data['created_at']."')";
-		$status = $conn->query($query);
+		$status = $this->conn->query($query);
 		return $status;
 		
 	}
@@ -82,10 +88,9 @@
 		
 		// $query = "UPDATE user SET name='".$data['name']."', email= '". $data['email']."', avatar= '". $data['avatar']."', created_at= '". $data['created_at']."' WHERE id = ".$id;
 	
-		$status = $conn->query($query);
+		$status = $this->conn->query($query);
 		return $status;
 		}
-	
-
+	}
 
  ?>

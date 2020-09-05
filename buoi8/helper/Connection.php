@@ -1,6 +1,11 @@
 <?php 
-	
-	function connect(){
+	class Connection{
+		var $servername;
+		var $username;
+		var $password;
+		var $dbname;
+
+		function connect(){
 		$servername = "localhost";
 
 		$username ="root";
@@ -16,7 +21,7 @@
 			exit();
 		}
 		return $conn;
+		}
 	}
-
 
  ?>
