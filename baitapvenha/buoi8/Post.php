@@ -4,26 +4,26 @@
 
 		public $title;
 		public $url;
-		public $description;
+		public $discription;
 		public $content;
 
-		function __construct($title,$url,$description,$content){
-			$this->title = $title;
-			$this->url = $url;
-			$this->description = $description;
-			$this->content = $content;
+		function __construct($title,$url,$discription,$content){
+			$this->title= $title;
+			$this->url= $url;
+			$this->discription= $discription;
+			$this->content= $content;
 		}
 		function InTT(){
-			echo "Thong tin danh muc: ";
+			echo "Thong tin danh muc";
 			echo "<br> Tieu de: $this->title";
 			echo "<br> Duong dan: $this->url";
-			echo "<br> Mo ta: $this->description";
+			echo "<br> Mo ta: $this->discription";
 			echo "<br> Noi dung: $this->content";
 		}
 	}
-	$post =new Post("Phong su","Duong dan","Mo ta","Noi dung");
-	$post->InTT();
-	
+	$post = new Post("Thoi su","24h.com","Khong co mo ta","Khong co noi dung");
+	$post -> InTT();
+
 
 
  ?>
