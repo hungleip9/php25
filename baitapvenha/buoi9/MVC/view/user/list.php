@@ -39,7 +39,7 @@
             	</td>            	
             	<td><?php echo $user['created_at']; ?></td>
             	 <td>
-                    <a href="Detail.php?id=<?php echo $user['id']?>" class="btn btn-primary">Detail</a>
+                    <a href="http://localhost/php25/baitapvenha/buoi9/MVC/index.php?mod=category&act=detail" class="btn btn-primary">Detail</a>
 
 
 

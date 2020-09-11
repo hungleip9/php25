@@ -16,7 +16,8 @@
 <body>
     <div class="container">
         <h3 class="text-center">--- CATEGORIES ---</h3>
-        <a href="view/category/add.php" class="btn btn-primary">Add New categories</a>
+        <a href="http://localhost/php25/baitapvenha/buoi9/MVC/index.php?mod=category&act=add" 
+        class="btn btn-primary">Add New categories</a>
         <table class="table">
             <thead>
                 <th>ID</th>
@@ -29,24 +30,24 @@
                 <th>Created_at</th>
                 <th>Action</th>
             </thead>
-            <?php foreach ($categories as $categories) { ?>
+            <?php foreach ($categories as $category) { ?>
                 <tr>
-                <td><?php echo $categories['id']; ?></td>
-                <td><?php echo $categories['name']; ?></td>
-                <td><?php echo $categories['parent_id']; ?></td>
-                <td><?php echo $categories['thumbnail']; ?></td>  
-                <td><?php echo $categories['slug']; ?></td>  
-                <td><?php echo $categories['description']; ?></td>    
-                <td><?php echo $categories['created_at']; ?></td>
+                <td><?php echo $category['id']; ?></td>
+                <td><?php echo $category['name']; ?></td>
+                <td><?php echo $category['parent_id']; ?></td>
+                <td><?php echo $category['thumbnail']; ?></td>  
+                <td><?php echo $category['slug']; ?></td>  
+                <td><?php echo $category['description']; ?></td>    
+                <td><?php echo $category['created_at']; ?></td>
                  <td>
-                    <a href="detail.php?id=<?php echo $categories['id']?>" class="btn btn-primary">Detail</a>
+                    <a href="http://localhost/php25/baitapvenha/buoi9/MVC/index.php?mod=category&act=detail&id=<?php echo $category['id']?>" class="btn btn-primary">Detail</a>
 
 
 
-                    <a href="view/category/edit.php?id=<?php echo $categories['id']?>" class="btn btn-success">Edit</a>
+                    <a href="http://localhost/php25/baitapvenha/buoi9/MVC/index.php?mod=category&act=edit&id=<?php echo $category['id']?>" class="btn btn-success">Edit</a>
 
 
-                    <a href="delete.php?id=<?php echo $categories['id']?>" class="btn btn-danger">Delete</a>
+                    <a href="delete.php?id=<?php echo $category['id']?>" class="btn btn-danger">Delete</a>
 
 
 

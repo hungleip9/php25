@@ -23,11 +23,14 @@ include_once "Connection.php";
 
 	function detail($table,$id){
 		$query = "SELECT * FROM $table WHERE id =$id";
-		$conn = connect();
+		// $conn = connect();
 		//thuc thi cau lenh
 		$result = $this->conn->query($query);
 		$data = $result->fetch_assoc();
+		// var_dump($data);
+		// die();
 		return $data;
+
 
 	}
 
@@ -43,7 +46,7 @@ include_once "Connection.php";
 		return $status;
 	}
 	function insert($table,$data){
-		$conn = connect();
+		// $conn = connect();
 		$query="INSERT INTO `$table`";
 		$string_1='';
 		$string_2='';
@@ -61,17 +64,14 @@ include_once "Connection.php";
 		}
 		$string = '('.$string_1.')'.' VALUE '.'('.$string_2.')';
 		$query = $query.$string;
-		// echo $query;
-		// die();
-
-		// $query="INSERT INTO `$table`(`name`, `email`,`avatar`, `created_at`) VALUES ('".$data['name']."','".$data['email']."','".$data['avatar']."','".$data['created_at']."')";
+		
 		$status = $this->conn->query($query);
 		return $status;
 		
 	}
 
 	function edit($table,$data,$id){
-		$conn = connect();
+		// $conn = connect();
 		$query = "UPDATE $table SET ";
 		
 		foreach ($data as $key => $value) {
@@ -80,13 +80,9 @@ include_once "Connection.php";
 			
 		}
 		$query = substr_replace($query, "",-1);
-		// echo $query;
-		// die();
-		$query .= " WHERE id = $id";
-		// echo $query;
-		// die();
 		
-		// $query = "UPDATE user SET name='".$data['name']."', email= '". $data['email']."', avatar= '". $data['avatar']."', created_at= '". $data['created_at']."' WHERE id = ".$id;
+		$query .= " WHERE id = $id";
+		
 	
 		$status = $this->conn->query($query);
 		return $status;
