@@ -6,9 +6,9 @@
 	
 
 	$class = ucfirst($mod) . "Controller";
-	$pash = "controllers/".$class.".php";
+	$path = "controllers/".$class.".php";
 	
-	require_once $pash;
+	require_once $path;
 	// require_once "controllers/PostController.php";
 	
 	$controller_obj = new $class();

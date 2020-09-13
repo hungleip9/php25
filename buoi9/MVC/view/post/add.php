@@ -16,35 +16,48 @@
 <body>
     <div class="container">
     <h3 align="center">DevMind - Education And Technology Group</h3>
-    <h3 align="center">Add New Categories</h3>
+    <h3 align="center">Add New User</h3>
     <hr>
-        <form action="index.php?mod=category&act=store" method="POST" role="form" enctype="multipart/form-data">
-            <a href="index.php?mod=category&act=list" class="btn btn-primary">BACK-TO-HOME</a>
+        <form action="index.php?mod=post&act=store" method="POST" role="form" enctype="multipart/form-data">
+            <a href="index.php?mod=post&act=list" class="btn btn-primary">BACK-TO-HOME</a>
             <div class="form-group">
-                <label for="">Name</label>
-                <input type="text" class="form-control" id="" placeholder="" name="name">
-            </div>
-            <div class="form-group">
-                <label for="">Parent_id</label>
-                <input type="text" class="form-control" id="" placeholder="" name="parent_id">
-            </div>
-            <div class="form-group">
-                <label for="">Thumbnail</label>
-                <input type="text" class="form-control" id="" placeholder="" name="thumbnail">
-            </div>
-            <div class="form-group">
-                <label for="">Slug</label>
-                <input type="text" class="form-control" id="" placeholder="" name="slug">
+                <label for="">Title</label>
+                <input type="text" class="form-control" id="" placeholder="" name="title">
             </div>
             <div class="form-group">
                 <label for="">Description</label>
                 <input type="text" class="form-control" id="" placeholder="" name="description">
             </div>
             <div class="form-group">
+                <label for="">Thumbnail</label>
+                <input type="text" class="form-control" id="" placeholder="" name="thumbnail">
+            </div>
+            <div class="form-group">
+                <label for="">Content</label>
+                <input type="text" class="form-control" id="" placeholder="" name="content">
+            </div>
+            <div class="form-group">
+                <label for="">Slug</label>
+                <input type="text" class="form-control" id="" placeholder="" name="slug">
+            </div>
+            <div class="form-group">
+                <label for="">View_count</label>
+                <input type="text" class="form-control" id="" placeholder="" name="view_count">
+            </div>
+            <!-- <div class="form-group">
+                <label for="">User_id</label>
+                <input type="text" class="form-control" id="" placeholder="" name="user_id">
+            </div> -->
+            <div class="form-group">
+                <label for="">Category_id</label>
+                <input type="text" class="form-control" id="" placeholder="" name="category_id">
+            </div>
+            <div class="form-group">
                 <label for="">Created_at</label>
                 <input type="date" class="form-control" id="" placeholder="" name="created_at">
             </div>
-            <button class="btn btn-primary">ADD</button>
+
+            <button type="submit" class="btn btn-primary">Create</button>
         </form>
     </div>
 </body>

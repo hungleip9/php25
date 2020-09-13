@@ -15,14 +15,14 @@
     <div class="container">
         <h3 class="text-center">Thông tin Danh muc</h3>
         <ul>
-            <li>Id : <?php echo $category['id']; ?></li>
-            <li>Name : <?php echo $category['name']; ?></li>
-            <li>Parent_id : <?php echo $category['parent_id']; ?></li>
-            <li>Thumbnail : <?php echo $category['thumbnail'] ?></li>
-            <li>Slug : <?php echo $category['slug'] ?></li>
-            <li>Description : <?php echo $category['description'] ?></li>
+            <li>Id : <?php echo $user['id']; ?></li>
+            <li>Name : <?php echo $user['name']; ?></li>
+            <li>Email : <?php echo $user['email']; ?></li>
+            <li>Avatar : <?php echo $user['avatar'] ?></li>
+            <li>Created : <?php echo $user['created_at'] ?></li>
+            
         </ul>
-        <a href="index.php?mod=category&act=list" class="btn btn-primary">Back</a>
+        <a href="index.php?mod=user&act=list" class="btn btn-primary">Back</a>
     </div>
  </body>
  </html>

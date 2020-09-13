@@ -4,15 +4,18 @@
 	class Category extends Model{
 		var $table = "categories";
 		function getAll(){
-			return $this->select($this->table);
-			return $this->edit($this->table);
-
-
-			
+			return $this->select($this->table);		
 		}
-		// function create(){
+		function getId($id){
+			return $this->detail($this->table,$id);	
+		}
+		function deleteCategory($id){
 			
-		// }
+			return $this->delete($this->table,$id);
+		}
+		function editCategory($id){
+			return $this->edit($this->table,$id);
+		}
 	}
 
 
