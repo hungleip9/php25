@@ -35,58 +35,45 @@ include_once "Connection.php";
 	}
 
 	function delete($table,$id){
-		$conn = connect();
 		$query= "DELETE FROM `$table` WHERE id = $id";
 
-    	// echo $query;
-
-    	// die();
 		$status = $this->conn->query($query);
 		
 		return $status;
 	}
-	function insert($table,$data){
-		// $conn = connect();
-		$query="INSERT INTO `$table`";
-		$string_1='';
-		$string_2='';
-		$i=0;
-		foreach ($data as $key => $value) {
-			$i++;
-			$string_1 .= $key;
-			if ($i != count($data)) {
-				$string_1 .= ',';
+	function Store($data){
+		$query = "INSERT INTO $this->table(";
+			foreach ($data as $key => $value) {
+				$query .= $key . ",";
 			}
-			$string_2 .= "'".$value."'";
-			if ($i != count($data)) {
-				$string_2 .= ',';
+			$query = substr_replace($query, ")", -1);
+			$query .= " VALUES (";
+			foreach ($data as $value) {
+				$query .= "'" . $value . "'" . ",";
 			}
-		}
-		$string = '('.$string_1.')'.' VALUE '.'('.$string_2.')';
-		$query = $query.$string;
-		
-		$status = $this->conn->query($query);
-		return $status;
+			$query = substr_replace($query, ")", -1);
+			$result = $this->conn->query($query);
+			return $result;
 		
 	}
 
-	function edit($table,$data,$id){
+	function edit($table,$id){
 		// $conn = connect();
-		$query = "UPDATE $table SET ";
-		
-		foreach ($data as $key => $value) {
-			
-			$query .= $key . " = '" . $value . "',";
-			
-		}
-		$query = substr_replace($query, "",-1);
-		
-		$query .= " WHERE id = $id";
-		
-	
-		$status = $this->conn->query($query);
-		return $status;
+
+		$query = "SELECT * FROM $this->table WHERE id = " . $id;
+			$result = $this->conn->query($query);
+			$data = $result->fetch_assoc();
+			return $data;
+	}
+	function Update($data, $id){
+			$query = "UPDATE $this->table SET ";
+			foreach ($data as $key => $value) {
+				$query .= $key . "=" . "'" . $value . "'" . ",";
+			}
+			$query = substr_replace($query, "", -1);
+			$query .= " WHERE id = " . $id;
+			$result = $this->conn->query($query);
+			return $result;
 		}
 	}
-
  ?>

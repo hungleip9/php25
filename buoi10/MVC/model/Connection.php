@@ -13,7 +13,7 @@
 
 			$this->password ="";
 
-			$this->dbname ="php25_blog"; //ten co so du lieu muon ket noi den
+			$this->dbname ="blog"; //ten co so du lieu muon ket noi den
 		}
 
 		public function connect(){

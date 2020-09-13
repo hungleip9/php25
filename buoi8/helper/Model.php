@@ -32,12 +32,10 @@ include_once "Connection.php";
 	}
 
 	function delete($table,$id){
-		$conn = connect();
+		// $conn = connect();
 		$query= "DELETE FROM `$table` WHERE id = $id";
 
-    	// echo $query;
-
-    	// die();
+    	
 		$status = $this->conn->query($query);
 		
 		return $status;

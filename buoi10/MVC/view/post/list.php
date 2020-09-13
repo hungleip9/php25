@@ -16,7 +16,7 @@
 <body>
     <div class="container">
         <h3 class="text-center">--- POST ---</h3>
-        <a href="add.php" class="btn btn-primary">Add New post</a>
+        <a href="index.php?mod=post&act=add" class="btn btn-primary">Add New post</a>
         <table class="table">
             <thead>
                 <th>ID</th>
@@ -30,7 +30,7 @@
                 <th>Category_id</th>
                 <th>Created_at</th>
             </thead>
-            <?php foreach ($posts as $post) { ?>
+            <?php foreach ($post as $post) { ?>
                 <tr>
                 <td><?php echo $post['id']; ?></td>
                 <td><?php echo $post['title']; ?></td>
@@ -42,14 +42,14 @@
                 <td><?php echo $post['category_id']; ?></td>   
                 <td><?php echo $post['created_at']; ?></td>
                  <td>
-                    <a href="detail.php?id=<?php echo $post['id']?>" class="btn btn-primary">Detail</a>
+                    <a href="index.php?mod=post&act=detail&id=<?php echo $post['id']?>" class="btn btn-primary">Detail</a>
 
 
 
-                    <a href="edit.php?id=<?php echo $post['id']?>" class="btn btn-success">Edit</a>
+                    <a href="index.php?mod=post&act=edit&id=<?php echo $post['id']?>" class="btn btn-success">Edit</a>
 
 
-                    <a href="delete.php?id=<?php echo $post['id']?>" class="btn btn-danger">Delete</a>
+                    <a href="index.php?mod=post&act=delete&id=<?php echo $post['id']?>" class="btn btn-danger">Delete</a>
 
 
 

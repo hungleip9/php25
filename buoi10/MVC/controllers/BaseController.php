@@ -6,7 +6,7 @@ class BaseController{
 		require_once "view/" . $path;
 		// require_once "view/footer";
 	}
-	public function redirect(){
+	public function redirect($path){
 		header("Location: ".$path);
 	}
 }

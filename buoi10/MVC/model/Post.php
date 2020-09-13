@@ -1,5 +1,5 @@
 <?php 
-	include_once "model/Model.php";
+	include_once "Model.php";
 
 	class Post extends Model{
 		var $table = "post";
@@ -7,9 +7,15 @@
 			return $this->select($this->table);
 			
 		}
-		// function create(){
-			
-		// }
+		function  detailPost($id){
+			return $this->detail($this->table,$id);	
+		}
+		function deletePost($id){
+			return $this->delete($this->table,$id);	
+		}
+		function editPost($id){
+			return $this->edit($this->table,$id);	
+		}
 	}
 
 

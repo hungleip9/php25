@@ -16,35 +16,27 @@
 <body>
     <div class="container">
     <h3 align="center">DevMind - Education And Technology Group</h3>
-    <h3 align="center">Add New Categories</h3>
+    <h3 align="center">Add New User</h3>
     <hr>
-        <form action="index.php?mod=category&act=store" method="POST" role="form" enctype="multipart/form-data">
-            <a href="index.php?mod=category&act=list" class="btn btn-primary">BACK-TO-HOME</a>
+        <form action="index.php?mod=user&act=store" method="POST" role="form" enctype="multipart/form-data">
+            <a href="index.php?mod=user&act=list" class="btn btn-primary">BACK-TO-HOME</a>
             <div class="form-group">
                 <label for="">Name</label>
                 <input type="text" class="form-control" id="" placeholder="" name="name">
             </div>
             <div class="form-group">
-                <label for="">Parent_id</label>
-                <input type="text" class="form-control" id="" placeholder="" name="parent_id">
+                <label for="">Email</label>
+                <input type="text" class="form-control" id="" placeholder="" name="email">
             </div>
             <div class="form-group">
-                <label for="">Thumbnail</label>
-                <input type="text" class="form-control" id="" placeholder="" name="thumbnail">
-            </div>
-            <div class="form-group">
-                <label for="">Slug</label>
-                <input type="text" class="form-control" id="" placeholder="" name="slug">
-            </div>
-            <div class="form-group">
-                <label for="">Description</label>
-                <input type="text" class="form-control" id="" placeholder="" name="description">
+                <label for="">Avatar</label>
+                <input type="text" class="form-control" id="" placeholder="link:" name="avatar">
             </div>
             <div class="form-group">
                 <label for="">Created_at</label>
                 <input type="date" class="form-control" id="" placeholder="" name="created_at">
             </div>
-            <button class="btn btn-primary">ADD</button>
+            <button type="submit" class="btn btn-primary">Create</button>
         </form>
     </div>
 </body>

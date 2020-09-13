@@ -30,9 +30,12 @@
                 <th>Created_at</th>
                 <th>Action</th>
             </thead>
-            <?php foreach ($categories as $category) { ?>
+            <?php 
+             $i=1; 
+            foreach ($categories as $category) { ?>
+
                 <tr>
-                <td><?php echo $category['id']; ?></td>
+                <td><?php echo $i; ?></td>
                 <td><?php echo $category['name']; ?></td>
                 <td><?php echo $category['parent_id']; ?></td>
                 <td><?php echo $category['thumbnail']; ?></td>  
@@ -47,13 +50,16 @@
                     <a href="index.php?mod=category&act=edit&id=<?php echo $category['id']?>" class="btn btn-success">Edit</a>
 
 
-                    <a href="delete.php?id=<?php echo $category['id']?>" class="btn btn-danger">Delete</a>
+                    <a href="index.php?mod=category&act=delete&id=<?php echo $category['id']?>" class="btn btn-danger">Delete</a>
 
 
 
                 </td>
                 </tr>
-            <?php } ?> 
+            <?php 
+                $i++;
+                } 
+            ?> 
             
             
         </table>
