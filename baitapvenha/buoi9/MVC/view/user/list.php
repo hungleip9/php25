@@ -16,7 +16,7 @@
 <body>
     <div class="container">
         <h3 class="text-center">--- USER ---</h3>
-        <a href="user_add.php" class="btn btn-primary">Add New User</a>
+        <a href="index.php?mod=user&act=add" class="btn btn-primary">Add New User</a>
         <table class="table">
             <thead>
                 <th>ID</th>
@@ -29,7 +29,7 @@
             </thead>
             <?php 
                 $i=1;
-            foreach ($users as $user) { ?>
+            foreach ($user as $user) { ?>
             	<tr>
             	<td><?php echo $i ?></td>
             	<td><?php echo $user['name']; ?></td>
@@ -39,14 +39,14 @@
             	</td>            	
             	<td><?php echo $user['created_at']; ?></td>
             	 <td>
-                    <a href="http://localhost/php25/baitapvenha/buoi9/MVC/index.php?mod=category&act=detail" class="btn btn-primary">Detail</a>
+                    <a href="index.php?mod=user&act=detail&id=<?php echo $user['id']?>" class="btn btn-primary">Detail</a>
 
 
 
-                    <a href="edit.php?id=<?php echo $user['id']?>" class="btn btn-success">Edit</a>
+                    <a href="index.php?mod=user&act=edit&id=<?php echo $user['id']?>" class="btn btn-success">Edit</a>
 
 
-                    <a href="delete.php?id=<?php echo $user['id']?>" class="btn btn-danger">Delete</a>
+                    <a href="index.php?mod=user&act=delete&id=<?php echo $user['id']?>" class="btn btn-danger">Delete</a>
 
 
 

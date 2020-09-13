@@ -16,7 +16,7 @@
 <body>
     <div class="container">
         <h3 class="text-center">--- CATEGORIES ---</h3>
-        <a href="http://localhost/php25/baitapvenha/buoi9/MVC/index.php?mod=category&act=add" 
+        <a href="index.php?mod=category&act=add" 
         class="btn btn-primary">Add New categories</a>
         <table class="table">
             <thead>
@@ -30,9 +30,12 @@
                 <th>Created_at</th>
                 <th>Action</th>
             </thead>
-            <?php foreach ($categories as $category) { ?>
+            <?php 
+             $i=1; 
+            foreach ($categories as $category) { ?>
+
                 <tr>
-                <td><?php echo $category['id']; ?></td>
+                <td><?php echo $i; ?></td>
                 <td><?php echo $category['name']; ?></td>
                 <td><?php echo $category['parent_id']; ?></td>
                 <td><?php echo $category['thumbnail']; ?></td>  
@@ -40,20 +43,23 @@
                 <td><?php echo $category['description']; ?></td>    
                 <td><?php echo $category['created_at']; ?></td>
                  <td>
-                    <a href="http://localhost/php25/baitapvenha/buoi9/MVC/index.php?mod=category&act=detail&id=<?php echo $category['id']?>" class="btn btn-primary">Detail</a>
+                    <a href="index.php?mod=category&act=detail&id=<?php echo $category['id']?>" class="btn btn-primary">Detail</a>
 
 
 
-                    <a href="http://localhost/php25/baitapvenha/buoi9/MVC/index.php?mod=category&act=edit&id=<?php echo $category['id']?>" class="btn btn-success">Edit</a>
+                    <a href="index.php?mod=category&act=edit&id=<?php echo $category['id']?>" class="btn btn-success">Edit</a>
 
 
-                    <a href="delete.php?id=<?php echo $category['id']?>" class="btn btn-danger">Delete</a>
+                    <a href="index.php?mod=category&act=delete&id=<?php echo $category['id']?>" class="btn btn-danger">Delete</a>
 
 
 
                 </td>
                 </tr>
-            <?php } ?> 
+            <?php 
+                $i++;
+                } 
+            ?> 
             
             
         </table>

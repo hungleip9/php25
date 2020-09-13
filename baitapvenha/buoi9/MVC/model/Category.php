@@ -9,15 +9,13 @@
 		function getId($id){
 			return $this->detail($this->table,$id);	
 		}
-		function getIdEdit($id,$category){
-			return $this->edit($this->table,$id,$category);	
-		}
-		function add(){
-			return $this->insert($this->table);	
-		}
-		// function create(){
+		function deleteCategory($id){
 			
-		// }
+			return $this->delete($this->table,$id);
+		}
+		function editCategory($id){
+			return $this->edit($this->table,$id);
+		}
 	}
 
 

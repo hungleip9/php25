@@ -5,17 +5,22 @@
 		var $password;
 		var $dbname;
 
-		function connect(){
-		$servername = "localhost";
+		function __construct(){
+			$this->servername = "localhost";
+			
 
-		$username ="root";
+			$this->username ="root";
 
-		$password ="";
+			$this->password ="";
 
-		$dbname ="php25_blog"; //ten co so du lieu muon ket noi den
+			$this->dbname ="blog"; //ten co so du lieu muon ket noi den
+		}
+
+		public function connect(){
+		
 
 		//tao ket noi CSDL
-		$conn = new mysqli($servername, $username, $password, $dbname);
+		$conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
 		if($conn->connect_errno){
 			echo "Failed to connect to MySql: ". $conn->connect_error;
 			exit();

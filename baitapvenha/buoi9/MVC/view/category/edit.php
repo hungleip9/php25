@@ -18,12 +18,12 @@
     <h3 align="center">DevMind - Education And Technology Group</h3>
     <h3 align="center">UPDATE Category</h3>
     <hr>
-        <form action="edit_process.php?id=<?php echo $category['id']?>" method="POST" role="form" enctype="multipart/form-data">
+        <form action="index.php?mod=category&act=update" method="POST" role="form" enctype="multipart/form-data">
         	<input type="hidden" name="id" value="<?php echo $category['id'] ?>">
-        	<a href="view/category/list.php" class="btn btn-primary">BACK-TO-HOME</a>
+        	<a href="index.php?mod=category&act=list" class="btn btn-primary">BACK-TO-HOME</a>
             <div class="form-group">
                 <label for="">Name</label>
-                <input type="text" class="form-control" id="" placeholder="" name="name" value="<?php echo $categorie['name'] ?>">
+                <input type="text" class="form-control" id="" placeholder="" name="name" value="<?php echo $category['name'] ?>">
             </div>
             <div class="form-group">
                 <label for="">Parent_id</label>
@@ -46,7 +46,9 @@
                 <label for="">Created_at</label>
                 <input type="date" class="form-control" id="" placeholder="" name="created_at" value="<?php echo $category['created_at'] ?>">
             </div>
-            <button type="submit" class="btn btn-primary">Create</button>
+            
+           <button class="btn btn-primary">Create</button>
+            
         </form>
     </div>
 </body>

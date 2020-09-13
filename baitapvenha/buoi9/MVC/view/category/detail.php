@@ -22,7 +22,7 @@
             <li>Slug : <?php echo $category['slug'] ?></li>
             <li>Description : <?php echo $category['description'] ?></li>
         </ul>
-        <a href="http://localhost/php25/baitapvenha/buoi9/MVC/index.php?mod=category&act=list" class="btn btn-primary">Back</a>
+        <a href="index.php?mod=category&act=list" class="btn btn-primary">Back</a>
     </div>
  </body>
  </html>
