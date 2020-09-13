@@ -6,8 +6,8 @@ class BaseController{
 		require_once "view/" . $path;
 		// require_once "view/footer";
 	}
-	public function redirect($back){
-		header("Location:index.php? ".$back);
+	public function redirect($path){
+		header("Location: ".$path);
 	}
 }
 

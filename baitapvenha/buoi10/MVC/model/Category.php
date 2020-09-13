@@ -2,7 +2,7 @@
 	include_once "model/Model.php";
 
 	class Category extends Model{
-		protected $table = "categories";
+		var $table = "categories";
 		function getAll(){
 			return $this->select($this->table);		
 		}

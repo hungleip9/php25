@@ -30,9 +30,9 @@
                 <th>Category_id</th>
                 <th>Created_at</th>
             </thead>
-            <?php $i=1; foreach ($post as $post) { ?>
+            <?php foreach ($post as $post) { ?>
                 <tr>
-                <td><?php echo $i; ?></td>
+                <td><?php echo $post['id']; ?></td>
                 <td><?php echo $post['title']; ?></td>
                 <td><?php echo $post['description']; ?></td>
                 <td><?php echo $post['thumbnail']; ?></td>  
@@ -55,7 +55,7 @@
 
                 </td>
                 </tr>
-            <?php $i++; } ?> 
+            <?php } ?> 
             
             
         </table>

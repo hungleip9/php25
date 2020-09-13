@@ -1,7 +1,6 @@
 <?php 
 include_once "Connection.php";
 	class Model{
-		protected $table;
 		var $conn;
 
 		function __construct(){

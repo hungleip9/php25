@@ -18,7 +18,13 @@
 			$data = $_POST;
 			
 			$result = $this->model->Store($data);
-			$this->redirect('mod=category&act=list');
+			if ($result) {
+				setcookie("msg","Tạo Mới Thành công",time() + 3);
+				header("location:index.php?mod=category&act=list");
+			}else{
+				setcookie("msg","Tạo Mới Thất Bại",time() + 3);
+				header("location:index.php?mod=category&act=add");
+			}
 		}
 		
 		public function edit(){	
@@ -33,7 +39,14 @@
 			$id = $_POST['id'];
 			
 			$result = $this->model->Update($data, $id);
-			$this->redirect('mod=category&act=list');
+			if ($result) {
+				setcookie("msg","Sửa Thành công",time() + 3);
+				header("location:index.php?mod=category&act=list");
+			}else{
+				setcookie("msg","Sửa Thất Bại",time() + 3);
+				header("location:index.php?mod=category&act=add");
+			}
+			header("location:index.php?mod=category&act=list");
 		}
 		public function detail(){
 			$id=$_GET['id'];
@@ -52,7 +65,14 @@
 			$id=$_GET['id'];
 			
 			$categoies=$this->model->deleteCategory($id);
-			$this->redirect('mod=category&act=list');
+			if ($categoies) {
+				setcookie("msg","Sửa Thành công",time() + 3);
+				header("location:index.php?mod=category&act=list");
+			}else{
+				setcookie("msg","Sửa Thất Bại",time() + 3);
+				header("location:index.php?mod=category&act=add");
+			}
+			header("location:index.php?mod=category&act=list");
 			
 
 
