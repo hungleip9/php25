@@ -8,6 +8,7 @@
 
 
 		$target_file = $target_dir . '/' .basename($_FILES[$input_name]["name"]);
+		
 
 		if (file_exists($target_file)){
 			$error_arr[]= "Sorry, file already exists.";

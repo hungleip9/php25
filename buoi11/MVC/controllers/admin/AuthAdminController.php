@@ -15,15 +15,21 @@ class AuthAdminController extends BaseController{
 		if ($user) {
 			if($user['password']==$password){
 				$_SESSION['login'] = true;
-				echo "Dang nhap thanh cong";
-				header('Location: index.php?mod=admin&c=category&act=index');
+				if ($username=='hung') {
+					header('Location: index.php?mod=admin&c=home&act=index');
+				}else{
+					header('Location: index.php?mod=client&c=home&act=index');
+				}
+				
 			}else{
 				$_SESSION['login'] = false;
 				echo "Mat khau khong dung";
+				header('Location: index.php?mod=admin&c=auth&act=login');
 			}
 		}else{
 			$_SESSION['login'] = false;
 			echo "tai khoan khong dung";
+			header('Location: index.php?mod=admin&c=auth&act=login');
 		}
 	}
 	public function logout(){

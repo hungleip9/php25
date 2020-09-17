@@ -10,7 +10,7 @@
 
         // echo $target_file;
         //buoc 2
-       $upload = move_uploaded_file($_FILES["image"]["tmp_name"], $target_file); // lấy file từ thư mục tạm sang thư mục tự khởi tạo
+       $upload = move_uploaded_file($_FILES["image"]["tmp_name"], $target_dir); // lấy file từ thư mục tạm sang thư mục tự khởi tạo
 
        // var_dump($upload);
        
