@@ -20,7 +20,7 @@ include_once "Connection.php";
 				$data[] = $row;
 		}
 		return $data;
-	}
+	}	
 
 	function detail($table,$id){
 		$query = "SELECT * FROM $table WHERE id =$id";
@@ -41,17 +41,18 @@ include_once "Connection.php";
 		$status = $this->conn->query($query);
 		return $status;
 	}
-	function Store($data){
+	function Store($data,$link,$link2,$link3,$link4,$link5){
 		$query = "INSERT INTO $this->table(";
 			foreach ($data as $key => $value) {
 				$query .= $key . ",";
 			}
-			$query = substr_replace($query, ")", -1);
+			$query = substr_replace($query, ",file,file2,file3,file4,file5)", -1);
 			$query .= " VALUES (";
 			foreach ($data as $value) {
 				$query .= "'" . $value . "'" . ",";
 			}
-			$query = substr_replace($query, ")", -1);
+			$query = substr_replace($query, ",'$link','$link2','$link3','$link4','$link5')", -1);
+			
 			$result = $this->conn->query($query);
 
 			return $result;
@@ -66,13 +67,14 @@ include_once "Connection.php";
 			$data = $result->fetch_assoc();
 			return $data;
 	}
-	function Update($data, $id){
+	function Update($data, $id,$link,$link2,$link3,$link4,$link5){
 			$query = "UPDATE $this->table SET ";
 			foreach ($data as $key => $value) {
 				$query .= $key . "=" . "'" . $value . "'" . ",";
 			}
 			$query = substr_replace($query, "", -1);
-			$query .= " WHERE id = " . $id;
+			$query .= ",file='$link'".",file2='$link2'".",file3='$link3'".",file4='$link4'".",file5='$link5'"." WHERE id = " . $id;
+			
 			$result = $this->conn->query($query);
 			return $result;
 		}
@@ -87,5 +89,8 @@ include_once "Connection.php";
 		
 		return $user;
 		}
+	function addADmodel($table,$id){
+
 	}
+}
  ?>

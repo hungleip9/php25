@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="xuly/fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="xuly/css/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css?fbclid=IwAR2rDoDUoo6LgSKq3VFOCWub2nnAlruZMkS9WhVgWYzngGNcPBKTOF3MaYM">
-    <link rel="stylesheet" href="xuly/css/style2.css">
+    <link rel="stylesheet" href="xuly/css/style4.css">
     <style type="text/css">
       .bg-light,.content1{
         background-color: rgba(0,0,0,0.9)!important;
@@ -98,6 +98,8 @@
           <div class="col-8 text-right">
             <nav class="site-navigation" role="navigation">
               <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block mb-0">
+               
+                
                 <li><a href="category.html">Home</a></li>
                 
                 <li><a href="index.php?c=user&mod=admin&act=index">Quản lý thành viên</a></li>
@@ -132,7 +134,7 @@
               </div>
             </a>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 matbiec">
             <a href="single.html" class="h-entry img-5 h-100 gradient" style="background-image: url('https://upload.wikimedia.org/wikipedia/vi/4/42/%C3%81p_ph%C3%ADch_phim_M%E1%BA%AFt_bi%E1%BA%BFc.jpg');">
               
               <div class="text">
@@ -176,7 +178,7 @@
         <div class="row">
           <div class="col-lg-12 mb-12">
             <div class="entry2" style="text-align: center;">
-              <a href="index.php?c=category&mod=admin&act=detail&id=<?php echo $category['id']?>"><img style="width: 50%;" src="<?php echo $category['image'];?>" alt="Image" class="img-fluid rounded"></a>
+              <a href="index.php?c=category&mod=admin&act=detail&id=<?php echo $category['id']?>"><img style="width: 50%;" src="<?php echo $category['file'];?>" alt="Image" class="img-fluid rounded"></a>
               <div class="excerpt">
               <span class="post-category text-white bg-secondary mb-3"><?php echo $category['slug']; ?></span>
             
@@ -184,7 +186,7 @@
             
               <div class="post-meta align-items-center text-left clearfix">
                 <figure class="author-figure mb-0 mr-3 float-left"></figure>
-                <span class="d-inline-block mt-1" >By <a href="#">Carrol Atkinson</a></span>
+                <span class="d-inline-block mt-1" >By <a href="#"><?php echo $category['tacGia']; ?></a></span>
                 <span>&nbsp;-&nbsp; <?php echo $category['created_at'] ?></span>
               </div>
               
@@ -211,9 +213,7 @@
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="site-section bg-light">
+      <div class="site-section">
       <div class="container">
 
         <div class="row align-items-stretch retro-layout">
@@ -260,6 +260,9 @@
 
       </div>
     </div>
+    </div>
+
+    
 
     <?php 
       require_once "view/public/footer.php";

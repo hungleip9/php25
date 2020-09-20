@@ -31,6 +31,10 @@
                 <input type="text" class="form-control" id="" placeholder="" name="name" value="<?php echo $category['name'] ?>">
             </div>
             <div class="form-group">
+                <label for="">Tác Giả</label>
+                <input type="text" class="form-control" id="" placeholder="" name="tacGia" value="<?php echo $category['tacGia'] ?>">
+            </div>
+            <div class="form-group">
                 <label for="">Parent_id</label>
                 <input type="text" class="form-control" id="" placeholder="" name="parent_id" value="<?php echo $category['parent_id'] ?>">
             </div>
@@ -57,23 +61,23 @@
             </div>
             <div class="form-group">
                 <label for="">Image</label>
-                <input type="text" class="form-control" id="" placeholder="" name="image" value="<?php echo $category['image'] ?>">
+                <input type="file" class="form-control" id="" placeholder="" name="file" value="<?php echo $category['file'] ?>">
             </div>
             <div class="form-group">
                 <label for="">Image2</label>
-                <input type="text" class="form-control" id="" placeholder="" name="image2" value="<?php echo $category['image2'] ?>">
+                <input type="file" class="form-control" id="" placeholder="" name="file2" value="<?php echo $category['file2'] ?>">
             </div>
             <div class="form-group">
                 <label for="">Image3</label>
-                <input type="text" class="form-control" id="" placeholder="" name="image3" value="<?php echo $category['image3'] ?>">
+                <input type="file" class="form-control" id="" placeholder="" name="file3" value="<?php echo $category['file3'] ?>">
             </div>
             <div class="form-group">
                 <label for="">Image4</label>
-                <input type="text" class="form-control" id="" placeholder="" name="image4" value="<?php echo $category['image4'] ?>">
+                <input type="file" class="form-control" id="" placeholder="" name="file4" value="<?php echo $category['file4'] ?>">
             </div>
             <div class="form-group">
                 <label for="">Image5</label>
-                <input type="text" class="form-control" id="" placeholder="" name="image5" value="<?php echo $category['image5'] ?>">
+                <input type="file" class="form-control" id="" placeholder="" name="file5" value="<?php echo $category['file5'] ?>">
             </div>
             <div class="form-group">
                 <label for="">Ý Nghĩa</label>

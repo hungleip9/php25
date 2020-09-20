@@ -14,8 +14,24 @@ class CategoryAdminController extends AdminController{
 		}
 	public function store(){
 			$data = $_POST;
+			$targetDir = "xuly/images/";			
+			$fileName = basename($_FILES["file"]["name"]);
+			$fileName2 = basename($_FILES["file2"]["name"]);
+			$fileName3 = basename($_FILES["file3"]["name"]);
+			$fileName4 = basename($_FILES["file4"]["name"]);
+			$fileName5 = basename($_FILES["file5"]["name"]);
+			$link = $targetDir . $fileName;
+			$link2 = $targetDir . $fileName2;
+			$link3 = $targetDir . $fileName3;
+			$link4 = $targetDir . $fileName4;
+			$link5 = $targetDir . $fileName5;
 			
-			$result = $this->model->Store($data);
+			$upload = move_uploaded_file($_FILES["file"]["tmp_name"], $link);
+			$upload2 = move_uploaded_file($_FILES["file2"]["tmp_name"], $link2);
+			$upload3 = move_uploaded_file($_FILES["file3"]["tmp_name"], $link3);
+			$upload4 = move_uploaded_file($_FILES["file4"]["tmp_name"], $link4);
+			$upload5 = move_uploaded_file($_FILES["file5"]["tmp_name"], $link5);
+			$result = $this->model->Store($data,$link,$link2,$link3,$link4,$link5);
 			$this->redirect('c=category&mod=admin&act=index');
 		}
 		
@@ -50,8 +66,24 @@ class CategoryAdminController extends AdminController{
 		public function update(){
 			$data = $_POST;
 			$id = $_POST['id'];
+			$targetDir = "xuly/images/";
+			$fileName = basename($_FILES["file"]["name"]);
+			$fileName2 = basename($_FILES["file2"]["name"]);
+			$fileName3 = basename($_FILES["file3"]["name"]);
+			$fileName4 = basename($_FILES["file4"]["name"]);
+			$fileName5 = basename($_FILES["file5"]["name"]);
+			$link = $targetDir . $fileName;
+			$link2 = $targetDir . $fileName2;
+			$link3 = $targetDir . $fileName3;
+			$link4 = $targetDir . $fileName4;
+			$link5 = $targetDir . $fileName5;
 			
-			$result = $this->model->Update($data, $id);
+			$upload = move_uploaded_file($_FILES["file"]["tmp_name"], $link);
+			$upload2 = move_uploaded_file($_FILES["file2"]["tmp_name"], $link2);
+			$upload3 = move_uploaded_file($_FILES["file3"]["tmp_name"], $link3);
+			$upload4 = move_uploaded_file($_FILES["file4"]["tmp_name"], $link4);
+			$upload5 = move_uploaded_file($_FILES["file5"]["tmp_name"], $link5);
+			$result = $this->model->Update($data, $id,$link,$link2,$link3,$link4,$link5);
 			$this->redirect('c=category&mod=admin&act=index');
 		}
 		public function detail(){

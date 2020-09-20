@@ -25,6 +25,10 @@
                 <input type="text" class="form-control" id="" placeholder="" name="name">
             </div>
             <div class="form-group">
+                <label for="">Tác Giả</label>
+                <input type="text" class="form-control" id="" placeholder="" name="tacGia">
+            </div>
+            <div class="form-group">
                 <label for="">Parent_id</label>
                 <input type="text" class="form-control" id="" placeholder="" name="parent_id">
             </div>
@@ -46,23 +50,23 @@
             </div>
             <div class="form-group">
                 <label for="">Image</label>
-                <input type="text" class="form-control" id="" placeholder="link.." name="image">
+                <input type="file" class="form-control" id="" placeholder="" name="file">
             </div>
             <div class="form-group">
                 <label for="">Image2</label>
-                <input type="text" class="form-control" id="" placeholder="link.." name="image2">
+                <input type="file" class="form-control" id="" placeholder="" name="file2">
             </div>
             <div class="form-group">
                 <label for="">Image3</label>
-                <input type="text" class="form-control" id="" placeholder="link.." name="image3">
+                <input type="file" class="form-control" id="" placeholder="" name="file3">
             </div>
             <div class="form-group">
                 <label for="">Image4</label>
-                <input type="text" class="form-control" id="" placeholder="link.." name="image4">
+                <input type="file" class="form-control" id="" placeholder="" name="file4">
             </div>
             <div class="form-group">
                 <label for="">Image5</label>
-                <input type="text" class="form-control" id="" placeholder="link.." name="image5">
+                <input type="file" class="form-control" id="" placeholder="" name="file5">
             </div>
             <button class="btn btn-primary">ADD</button>
             <a href="index.php?c=auth&mod=admin&act=logout">Logout</a>

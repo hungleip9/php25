@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="xuly/fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="xuly/css/aos.css">
 
-    <link rel="stylesheet" href="xuly/css/style2.css">
+    <link rel="stylesheet" href="xuly/css/style4.css">
     <style type="text/css">
       
       p,span,a,h2{
@@ -140,7 +140,7 @@
         <div class="row">
           <div class="col-lg-12 mb-12">
             <div class="entry2" style="text-align: center;">
-              <a href="index.php?c=category&mod=client&act=detail&id=<?php echo $category['id']?>"><img style="width: 50%;" src="<?php echo $category['image'];?>" alt="Image" class="img-fluid rounded"></a>
+              <a href="index.php?c=category&mod=client&act=detail&id=<?php echo $category['id']?>"><img style="width: 50%;" src="<?php echo $category['file'];?>" alt="Image" class="img-fluid rounded"></a>
               <div class="excerpt">
               <span class="post-category text-white bg-secondary mb-3"><?php echo $category['slug']; ?></span>
             
@@ -148,7 +148,7 @@
             
               <div class="post-meta align-items-center text-left clearfix">
                 <figure class="author-figure mb-0 mr-3 float-left"></figure>
-                <span class="d-inline-block mt-1" >By <a href="#">Carrol Atkinson</a></span>
+                <span class="d-inline-block mt-1" >By <a href="#"><?php echo $category['tacGia'] ?></a></span>
                 <span>&nbsp;-&nbsp; <?php echo $category['created_at'] ?></span>
               </div>
               

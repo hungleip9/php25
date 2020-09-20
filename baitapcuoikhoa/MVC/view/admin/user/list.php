@@ -48,6 +48,7 @@
 
 
                     <a href="index.php?mod=admin&c=user&act=delete&id=<?php echo $user['id']?>" class="btn btn-danger">Delete</a>
+                    <a href="index.php?mod=admin&c=user&act=addAD&id=<?php echo $user['id']?>" class="btn btn-primary">Add Admin</a>
 
 
 

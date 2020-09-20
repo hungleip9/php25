@@ -19,6 +19,9 @@
 		function getUserByName($username){
 			return $this->getByName($this->table,$username);
 		}
+		function getName($name){
+			return $this->selectName($this->table,$name);
+		}
 	}
 
  ?>

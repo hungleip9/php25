@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="xuly/fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="xuly/css/aos.css">
 
-    <link rel="stylesheet" href="xuly/css/style2.css">
+    <link rel="stylesheet" href="xuly/css/style3.css">
   </head>
   <body>
   
@@ -64,7 +64,7 @@
     </header>
     
     
-    <div class="site-cover site-cover-sm same-height overlay single-page" style="background-image: url('<?php echo $category['image']?>');">
+    <div class="site-cover site-cover-sm same-height overlay single-page" style="background-image: url('<?php echo $category['file']?>');">
       <div class="container">
         <div class="row same-height justify-content-center">
           <div class="col-md-12 col-lg-10">
@@ -78,11 +78,11 @@
     </div>
     
     
-    <div class="site-section bg-light">
+    <div class="site-section">
       <div class="container">
         <div class="row">
           <div class="col-md-6 order-md-2">
-            <img src="<?php echo $category['image2']?>" alt="Image" class="img-fluid">
+            <img src="<?php echo $category['file2']?>" alt="Image" class="img-fluid">
           </div>
           <div class="col-md-5 mr-auto order-md-1">
             <h2>Nội Dung Phim</h2>
@@ -102,21 +102,21 @@
             <p><?php echo $category['ynghia1'] ?></p>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-4 mb-5 text-center">
-            <img src="<?php echo $category['image3']?>" alt="Image" class="img-fluid w-50 rounded-circle mb-4">
+        <div class="row boicanh">
+          <div class="col-md-12 col-lg-12 mb-12 text-left">
+            <img src="<?php echo $category['file3']?>" alt="Image" style="float: left;">
             <h2 class="mb-3 h5">Bối Cảnh</h2>
             <p><?php echo $category['ynghia2'] ?></p>
           </div>
 
-          <div class="col-md-6 col-lg-4 mb-5 text-center">
-            <img src="<?php echo $category['image4']?>" alt="Image" class="img-fluid w-50 rounded-circle mb-4">
+          <div class="col-md-12 col-lg-12 mb-12 text-left">
+            <img src="<?php echo $category['file4']?>" alt="Image" style="float: right; padding-left: 5px;">
             <h2 class="mb-3 h5">Diễn Biến</h2>
             <p><?php echo $category['ynghia3'] ?></p>
           </div>
 
-          <div class="col-md-6 col-lg-4 mb-5 text-center">
-            <img src="<?php echo $category['image5']?>" alt="Image" class="img-fluid w-50 rounded-circle mb-4">
+          <div class="col-md-12 col-lg-12 mb-12 text-left">
+            <img src="<?php echo $category['file5']?>" alt="Image" style="float: left;">
             <h2 class="mb-3 h5">Nhân Vật</h2>
             <p><?php echo $category['ynghia4'] ?></p>
           </div>
@@ -124,11 +124,11 @@
       </div>
     </div>
     
-    <div class="site-section bg-light">
+    <div class="site-section">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <img src="<?php echo $category['image']?>" alt="Image" class="img-fluid">
+            <img src="<?php echo $category['file']?>" alt="Image" class="img-fluid">
           </div>
           <div class="col-md-5 ml-auto">
             <h2>Cái Kết</h2>
@@ -137,6 +137,11 @@
           </div>
         </div>
       </div>
+      <audio controls class="audio">
+
+        <source src="xuly/audio/tudo.mp3" type="audio/mpeg" >
+
+        </audio>
     </div>
     
     <?php 

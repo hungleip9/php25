@@ -54,6 +54,11 @@ class UserAdminController extends AdminController{
 			$result = $this->model->Update($data, $id);
 			$this->redirect('c=user&mod=admin&act=index');
 		}
+		public function addAD(){
+			$user = $this->model->getAll();
+			$this->view("admin/user/addAD.php",["user"=>$user]);
+		}
+		
 }
 
  ?>

@@ -95,7 +95,7 @@ h1, h2, h3, h4, h5,
 .site-section {
   padding: 2.5em 0;
   
-  
+  background-image: url("slider-bg-1.jpg");
 }
   @media (min-width: 768px) {
     .site-section {
@@ -1242,9 +1242,19 @@ h1, h2, h3, h4, h5,
   .btn-primary{
     border-radius: 5px !important;
   }
-  .bg-light,.content1,.site-section{
-        background-image: url('../images/backgroup.jpg');
+  .bg-light,.content1{
         background-color: rgba(0,0,0,0.9)!important;
-        background-size: cover;
       }
+  .boicanh img{
+    width: 500px;
+    margin-right: 20px;
+    border-radius: 20px;
+
+  }
+  .boicanh div{
+     margin-top: 50px;
+  }
+  .audio{
+    display: none;
+  }
  
