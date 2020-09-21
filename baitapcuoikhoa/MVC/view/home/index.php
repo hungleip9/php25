@@ -1,7 +1,7 @@
  <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Blog Film - Admin</title>
+    <title>Blog Film</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -16,8 +16,56 @@
     <link rel="stylesheet" href="xuly/css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="xuly/fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="xuly/css/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css?fbclid=IwAR2rDoDUoo6LgSKq3VFOCWub2nnAlruZMkS9WhVgWYzngGNcPBKTOF3MaYM">
+    <link rel="stylesheet" href="xuly/css/style4.css">
+    <style type="text/css">
+      .bg-light,.content1{
+        background-color: rgba(0,0,0,0.9)!important;
+      }
+      p,span,a,h2{
+        color: white!important;
+        font-weight:bold;
+      }
+      hr{
+        background-color: white !important;
+      }
+      .text-right a{
+        color: black !important;
 
-    <link rel="stylesheet" href="xuly/css/style.css">
+      }
+      .back-to-top{
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 25px;
+        text-align: center;
+        background-color: white;
+        opacity: 0.2;
+        border-radius: 50%;
+        color: black;
+        position: fixed;
+        bottom: 40px;
+        right: 35px;
+        z-index: 99;
+        box-shadow: 0 0 15px gray;
+        transition: 0.3s ease;
+
+      }
+      .back-to-top i{
+
+      }
+      .back-to-top:hover{
+        background-color: #488BDD;
+        color: white;
+        opacity: 0.9;
+        transition: 0.3s ease;
+      }
+      .back-to-top.hien-ra{
+        visibility: visible;
+        opacity: 1;
+      }
+
+    </style>
   </head>
   <body>
   
@@ -44,19 +92,16 @@
           </div>
 
           <div class="col-4 site-logo">
-            <a href="index.html" class="text-black h2 mb-0">Blog Film - Admin</a>
+            <a href="index.html" class="text-black h2 mb-0">Blog Film</a>
           </div>
 
           <div class="col-8 text-right">
             <nav class="site-navigation" role="navigation">
               <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block mb-0">
-                <li><a href="category.html">Home</a></li>
-                <li><a href="index.php?c=post&mod=admin&act=add">Post</a></li>
-                <li><a href="category.html">Tech</a></li>
-                <li><a href="category.html">Entertainment</a></li>
-                <li><a href="category.html">Travel</a></li>
-                <li><a href="category.html">Sports</a></li>
-                <li><a href="index.php?c=auth&mod=admin&act=logout">Logout</a></li>
+               
+                
+                <li><a href="index.php?c=home&mod=client&act=index">Home</a></li>
+                <li><a href="index.php?c=auth&mod=admin&act=login">Login</a></li>
                 <li class="d-none d-lg-inline-block"><a href="#" class="js-search-toggle"><span class="icon-search"></span></a></li>
               </ul>
             </nav>
@@ -71,47 +116,47 @@
       <div class="container">
         <div class="row align-items-stretch retro-layout-2">
           <div class="col-md-4">
-            <a href="single.html" class="h-entry mb-30 v-height gradient" style="background-image: url('xuly/images/img_1.jpg');">
+            <a href="single.html" class="h-entry mb-30 v-height gradient" style="background-image: url('http://khoavanhue.husc.edu.vn/wp-content/uploads/2016/11/toi-thay-hoa-vang.jpg');">
               
               <div class="text">
-                <h2>The AI magically removes moving objects from videos.</h2>
-                <span class="date">July 19, 2019</span>
+                <h2>Blog phim viết lên những bài viết chất lượng</h2>
+                
               </div>
             </a>
-            <a href="single.html" class="h-entry v-height gradient" style="background-image: url('xuly/images/img_2.jpg');">
+            <a href="single.html" class="h-entry v-height gradient" style="background-image: url('https://i.ytimg.com/vi/0VC6euBtKkk/maxresdefault.jpg');">
               
               <div class="text">
-                <h2>The AI magically removes moving objects from videos.</h2>
-                <span class="date">July 19, 2019</span>
+                <h2>Nơi tham khảo về phim ảnh</h2>
+                
               </div>
             </a>
           </div>
-          <div class="col-md-4">
-            <a href="single.html" class="h-entry img-5 h-100 gradient" style="background-image: url('xuly/images/img_v_1.jpg');">
+          <div class="col-md-4 matbiec">
+            <a href="single.html" class="h-entry img-5 h-100 gradient" style="background-image: url('https://upload.wikimedia.org/wikipedia/vi/4/42/%C3%81p_ph%C3%ADch_phim_M%E1%BA%AFt_bi%E1%BA%BFc.jpg');">
               
               <div class="text">
                 <div class="post-categories mb-3">
-                  <span class="post-category bg-danger">Travel</span>
-                  <span class="post-category bg-primary">Food</span>
+                  <span class="post-category bg-danger">Đam mê</span>
+                  <span class="post-category bg-primary">Nhiệt huyết</span>
                 </div>
-                <h2>The AI magically removes moving objects from videos.</h2>
-                <span class="date">July 19, 2019</span>
+                <h2>Blog Phim</h2>
+                
               </div>
             </a>
           </div>
           <div class="col-md-4">
-            <a href="single.html" class="h-entry mb-30 v-height gradient" style="background-image: url('xuly/images/img_3.jpg');">
+            <a href="single.html" class="h-entry mb-30 v-height gradient" style="background-image: url('https://cdnmedia.thethaovanhoa.vn/Upload/WZtxtaIgQJQXiXghN1ELQ/files/2018/09/Immortal_Character_Thay-Ninh.jpg');">
               
               <div class="text">
-                <h2>The 20 Biggest Fintech Companies In America 2019</h2>
-                <span class="date">July 19, 2019</span>
+                <h2>Cùng khám phá giá trị của môn nghệ thuật thứ 7</h2>
+                
               </div>
             </a>
-            <a href="single.html" class="h-entry v-height gradient" style="background-image: url('xuly/images/img_4.jpg');">
+            <a href="single.html" class="h-entry v-height gradient" style="background-image: url('https://static.yeah1.com/uploads/editors/49/2019/12/30/CJN9MiNUezYGkyh7Vju0H4ylJbwnudPn6DgBl94s.png');">
               
               <div class="text">
-                <h2>The 20 Biggest Fintech Companies In America 2019</h2>
-                <span class="date">July 19, 2019</span>
+                <h2>Cảnh báo có spoiler phim</h2>
+                
               </div>
             </a>
           </div>
@@ -119,183 +164,38 @@
       </div>
     </div>
 
-    <div class="site-section">
+    <div class="site-section content1">
       <div class="container">
         <div class="row mb-5">
           <div class="col-12">
-            <h2>Recent Posts</h2>
+            <h2>Phim Hay</h2>
           </div>
         </div>
+        <?php foreach ($categories as $category) { ?>
         <div class="row">
-          <div class="col-lg-4 mb-4">
-            <div class="entry2">
-              <a href="single.html"><img src="xuly/images/img_1.jpg" alt="Image" class="img-fluid rounded"></a>
+          <div class="col-lg-12 mb-12">
+            <div class="entry2" style="text-align: center;">
+              <a href="index.php?c=category&mod=admin&act=detail&id=<?php echo $category['id']?>"><img style="width: 50%;" src="<?php echo $category['file'];?>" alt="Image" class="img-fluid rounded"></a>
               <div class="excerpt">
-              <span class="post-category text-white bg-secondary mb-3">Politics</span>
-
-              <h2><a href="single.html">The AI magically removes moving objects from videos.</a></h2>
+              <span class="post-category text-white bg-secondary mb-3"><?php echo $category['slug']; ?></span>
+            
+              <h2><a href="single.html"><?php echo $category['name']; ?></a></h2>
+            
               <div class="post-meta align-items-center text-left clearfix">
-                <figure class="author-figure mb-0 mr-3 float-left"><img src="xuly/images/person_1.jpg" alt="Image" class="img-fluid"></figure>
-                <span class="d-inline-block mt-1">By <a href="#">Carrol Atkinson</a></span>
-                <span>&nbsp;-&nbsp; July 19, 2019</span>
+                <figure class="author-figure mb-0 mr-3 float-left"></figure>
+                <span class="d-inline-block mt-1" >By <a href="#"><?php echo $category['tacGia']; ?></a></span>
+                <span>&nbsp;-&nbsp; <?php echo $category['created_at'] ?></span>
               </div>
               
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-                <p><a href="#">Read More</a></p>
+                <p><?php echo $category['description']; ?></p>
+                
+                <hr>
               </div>
             </div>
-          </div>
-          <div class="col-lg-4 mb-4">
-            <div class="entry2">
-              <a href="single.html"><img src="xuly/images/img_2.jpg" alt="Image" class="img-fluid rounded"></a>
-              <div class="excerpt">
-              <span class="post-category text-white bg-success mb-3">Nature</span>
-
-              <h2><a href="single.html">The AI magically removes moving objects from videos.</a></h2>
-              <div class="post-meta align-items-center text-left clearfix">
-                <figure class="author-figure mb-0 mr-3 float-left"><img src="xuly/images/person_1.jpg" alt="Image" class="img-fluid"></figure>
-                <span class="d-inline-block mt-1">By <a href="#">Carrol Atkinson</a></span>
-                <span>&nbsp;-&nbsp; July 19, 2019</span>
-              </div>
-              
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-                <p><a href="#">Read More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 mb-4">
-            <div class="entry2">
-              <a href="single.html"><img src="xuly/images/img_3.jpg" alt="Image" class="img-fluid rounded"></a>
-              <div class="excerpt">
-              <span class="post-category text-white bg-warning mb-3">Travel</span>
-
-              <h2><a href="single.html">The AI magically removes moving objects from videos.</a></h2>
-              <div class="post-meta align-items-center text-left clearfix">
-                <figure class="author-figure mb-0 mr-3 float-left"><img src="xuly/images/person_1.jpg" alt="Image" class="img-fluid"></figure>
-                <span class="d-inline-block mt-1">By <a href="#">Carrol Atkinson</a></span>
-                <span>&nbsp;-&nbsp; July 19, 2019</span>
-              </div>
-              
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-                <p><a href="#">Read More</a></p>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-lg-4 mb-4">
-            <div class="entry2">
-              <a href="single.html"><img src="xuly/images/img_1.jpg" alt="Image" class="img-fluid rounded"></a>
-              <div class="excerpt">
-              <span class="post-category text-white bg-secondary mb-3">Politics</span>
-
-              <h2><a href="single.html">The AI magically removes moving objects from videos.</a></h2>
-              <div class="post-meta align-items-center text-left clearfix">
-                <figure class="author-figure mb-0 mr-3 float-left"><img src="xuly/images/person_1.jpg" alt="Image" class="img-fluid"></figure>
-                <span class="d-inline-block mt-1">By <a href="#">Carrol Atkinson</a></span>
-                <span>&nbsp;-&nbsp; July 19, 2019</span>
-              </div>
-              
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-                <p><a href="#">Read More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 mb-4">
-            <div class="entry2">
-              <a href="single.html"><img src="xuly/images/img_2.jpg" alt="Image" class="img-fluid rounded"></a>
-              <div class="excerpt">
-              <span class="post-category text-white bg-success mb-3">Nature</span>
-
-              <h2><a href="single.html">The AI magically removes moving objects from videos.</a></h2>
-              <div class="post-meta align-items-center text-left clearfix">
-                <figure class="author-figure mb-0 mr-3 float-left"><img src="xuly/images/person_1.jpg" alt="Image" class="img-fluid"></figure>
-                <span class="d-inline-block mt-1">By <a href="#">Carrol Atkinson</a></span>
-                <span>&nbsp;-&nbsp; July 19, 2019</span>
-              </div>
-              
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-                <p><a href="#">Read More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 mb-4">
-            <div class="entry2">
-              <a href="single.html"><img src="xuly/images/img_4.jpg" alt="Image" class="img-fluid rounded"></a>
-              <div class="excerpt">
-              <span class="post-category text-white bg-danger mb-3">Sports</span>
-
-              <h2><a href="single.html">The AI magically removes moving objects from videos.</a></h2>
-              <div class="post-meta align-items-center text-left clearfix">
-                <figure class="author-figure mb-0 mr-3 float-left"><img src="xuly/images/person_1.jpg" alt="Image" class="img-fluid"></figure>
-                <span class="d-inline-block mt-1">By <a href="#">Carrol Atkinson</a></span>
-                <span>&nbsp;-&nbsp; July 19, 2019</span>
-              </div>
-              
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-                <p><a href="#">Read More</a></p>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-lg-4 mb-4">
-            <div class="entry2">
-              <a href="single.html"><img src="xuly/images/img_1.jpg" alt="Image" class="img-fluid rounded"></a>
-              <div class="excerpt">
-              <span class="post-category text-white bg-success mb-3">Nature</span>
-
-              <h2><a href="single.html">The AI magically removes moving objects from videos.</a></h2>
-              <div class="post-meta align-items-center text-left clearfix">
-                <figure class="author-figure mb-0 mr-3 float-left"><img src="xuly/images/person_1.jpg" alt="Image" class="img-fluid"></figure>
-                <span class="d-inline-block mt-1">By <a href="#">Carrol Atkinson</a></span>
-                <span>&nbsp;-&nbsp; July 19, 2019</span>
-              </div>
-              
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-                <p><a href="#">Read More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 mb-4">
-            <div class="entry2">
-              <a href="single.html"><img src="xuly/images/img_2.jpg" alt="Image" class="img-fluid rounded"></a>
-              <div class="excerpt">
-              <span class="post-category text-white bg-danger mb-3">Sports</span>
-              <span class="post-category text-white bg-secondary mb-3">Tech</span>
-
-              <h2><a href="single.html">The AI magically removes moving objects from videos.</a></h2>
-              <div class="post-meta align-items-center text-left clearfix">
-                <figure class="author-figure mb-0 mr-3 float-left"><img src="xuly/images/person_1.jpg" alt="Image" class="img-fluid"></figure>
-                <span class="d-inline-block mt-1">By <a href="#">Carrol Atkinson</a></span>
-                <span>&nbsp;-&nbsp; July 19, 2019</span>
-              </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-                <p><a href="#">Read More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 mb-4">
-            <div class="entry2">
-              <a href="single.html"><img src="xuly/images/img_4.jpg" alt="Image" class="img-fluid rounded"></a>
-              <div class="excerpt">
-              <span class="post-category text-white bg-danger mb-3">Sports</span>
-              <span class="post-category text-white bg-warning mb-3">Lifestyle</span>
-
-              <h2><a href="single.html">The AI magically removes moving objects from videos.</a></h2>
-              <div class="post-meta align-items-center text-left clearfix">
-                <figure class="author-figure mb-0 mr-3 float-left"><img src="xuly/images/person_1.jpg" alt="Image" class="img-fluid"></figure>
-                <span class="d-inline-block mt-1">By <a href="#">Carrol Atkinson</a></span>
-                <span>&nbsp;-&nbsp; July 19, 2019</span>
-              </div>
-              
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-                <p><a href="#">Read More</a></p>
-              </div>
-            </div>
-          </div>
+          </div>          
         </div>
-        <div class="row text-center pt-5 border-top">
+        <?php } ?>
+        <div class="row text-center pt-5">
           <div class="col-md-12">
             <div class="custom-pagination">
               <span>1</span>
@@ -308,46 +208,44 @@
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="site-section bg-light">
+      <div class="site-section">
       <div class="container">
 
         <div class="row align-items-stretch retro-layout">
           
           <div class="col-md-5 order-md-2">
-            <a href="single.html" class="hentry img-1 h-100 gradient" style="background-image: url('xuly/images/img_4.jpg');">
-              <span class="post-category text-white bg-danger">Travel</span>
+            <a href="single.html" class="hentry img-1 h-100 gradient" style="background-image: url('https://static.yeah1.com/uploads/editors/49/2019/12/30/CJN9MiNUezYGkyh7Vju0H4ylJbwnudPn6DgBl94s.png');">
+              <span class="post-category text-white bg-danger">Đam mê</span>
               <div class="text">
-                <h2>The 20 Biggest Fintech Companies In America 2019</h2>
-                <span>February 12, 2019</span>
+                <h2>Top Phim Việt Hay</h2>
+                
               </div>
             </a>
           </div>
 
           <div class="col-md-7">
             
-            <a href="single.html" class="hentry img-2 v-height mb30 gradient" style="background-image: url('xuly/images/img_1.jpg');">
-              <span class="post-category text-white bg-success">Nature</span>
+            <a href="single.html" class="hentry img-2 v-height mb30 gradient" style="background-image: url('http://khoavanhue.husc.edu.vn/wp-content/uploads/2016/11/toi-thay-hoa-vang.jpg');">
+              <span class="post-category text-white bg-success">Nhiệt huyết</span>
               <div class="text text-sm">
-                <h2>The 20 Biggest Fintech Companies In America 2019</h2>
-                <span>February 12, 2019</span>
+                <h2>Top Phim Việt Hay</h2>
+                
               </div>
             </a>
             
             <div class="two-col d-block d-md-flex">
-              <a href="single.html" class="hentry v-height img-2 gradient" style="background-image: url('xuly/images/img_2.jpg');">
-                <span class="post-category text-white bg-primary">Sports</span>
+              <a href="single.html" class="hentry v-height img-2 gradient" style="background-image: url('https://i.ytimg.com/vi/0VC6euBtKkk/maxresdefault.jpg');">
+                <span class="post-category text-white bg-primary">Tận tâm</span>
                 <div class="text text-sm">
-                  <h2>The 20 Biggest Fintech Companies In America 2019</h2>
-                  <span>February 12, 2019</span>
+                  <h2>Top Phim Việt Hay</h2>
+                  
                 </div>
               </a>
-              <a href="single.html" class="hentry v-height img-2 ml-auto gradient" style="background-image: url('xuly/images/img_3.jpg');">
-                <span class="post-category text-white bg-warning">Lifestyle</span>
+              <a href="single.html" class="hentry v-height img-2 ml-auto gradient" style="background-image: url('https://upload.wikimedia.org/wikipedia/vi/4/42/%C3%81p_ph%C3%ADch_phim_M%E1%BA%AFt_bi%E1%BA%BFc.jpg');">
+                <span class="post-category text-white bg-warning">Tầm nhìn</span>
                 <div class="text text-sm">
-                  <h2>The 20 Biggest Fintech Companies In America 2019</h2>
-                  <span>February 12, 2019</span>
+                  <h2>Top Phim Việt Hay</h2>
+                  
                 </div>
               </a>
             </div>  
@@ -357,90 +255,46 @@
 
       </div>
     </div>
-
-
-    <div class="site-section bg-lightx">
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-md-5">
-            <div class="subscribe-1 ">
-              <h2>Subscribe to our newsletter</h2>
-              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit nesciunt error illum a explicabo, ipsam nostrum.</p>
-              <form action="#" class="d-flex">
-                <input type="text" class="form-control" placeholder="Enter your email address">
-                <input type="submit" class="btn btn-primary" value="Subscribe">
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-    
-    
-    <div class="site-footer">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md-4">
-            <h3 class="footer-heading mb-4">About Us</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat reprehenderit magnam deleniti quasi saepe, consequatur atque sequi delectus dolore veritatis obcaecati quae, repellat eveniet omnis, voluptatem in. Soluta, eligendi, architecto.</p>
-          </div>
-          <div class="col-md-3 ml-auto">
-            <!-- <h3 class="footer-heading mb-4">Navigation</h3> -->
-            <ul class="list-unstyled float-left mr-5">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Advertise</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Subscribes</a></li>
-            </ul>
-            <ul class="list-unstyled float-left">
-              <li><a href="#">Travel</a></li>
-              <li><a href="#">Lifestyle</a></li>
-              <li><a href="#">Sports</a></li>
-              <li><a href="#">Nature</a></li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            
 
-            <div>
-              <h3 class="footer-heading mb-4">Connect With Us</h3>
-              <p>
-                <a href="#"><span class="icon-facebook pt-2 pr-2 pb-2 pl-0"></span></a>
-                <a href="#"><span class="icon-twitter p-2"></span></a>
-                <a href="#"><span class="icon-instagram p-2"></span></a>
-                <a href="#"><span class="icon-rss p-2"></span></a>
-                <a href="#"><span class="icon-envelope p-2"></span></a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 text-center">
-            <p>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              </p>
-          </div>
-        </div>
-      </div>
-    </div>
+    
+
+    <?php 
+      require_once "view/public/footer.php";
+    ?>
     
   </div>
-
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/jquery-ui.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/jquery.countdown.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/bootstrap-datepicker.min.js"></script>
-  <script src="js/aos.js"></script>
+  <div class="back-to-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
+  
+  <script src="xuly/js/jquery-3.3.1.min.js"></script>
+  <script src="xuly/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="xuly/js/jquery-ui.js"></script>
+  <script src="xuly/js/popper.min.js"></script>
+  <script src="xuly/js/bootstrap.min.js"></script>
+  <script src="xuly/js/owl.carousel.min.js"></script>
+  <script src="xuly/js/jquery.stellar.min.js"></script>
+  <script src="xuly/js/jquery.countdown.min.js"></script>
+  <script src="xuly/js/jquery.magnific-popup.min.js"></script>
+  <script src="xuly/js/bootstrap-datepicker.min.js"></script>
+  <script src="xuly/js/aos.js"></script>
 
   <script src="js/main.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($) {
+      $(window).scroll(function(event){
+      var pos_body = $('html,body').scrollTop();
+      if(pos_body>100){
+        $('.back-to-top').addClass('hien-ra');
+      }else{
+        $('.back-to-top').removeClass('hien-ra');
+      }
+      
+    });
+    $('.back-to-top').click(function(){
+      $('html, body').animate({scrollTop : 0}, 800);
+    });
+    });
+  </script>
 
 
   </body>

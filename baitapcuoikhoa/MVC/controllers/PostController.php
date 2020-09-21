@@ -6,7 +6,7 @@ require_once"controllers/BaseController.php";
 			$this->model = new Post();
 			}
 		
-		function list(){
+		function index(){
 			$post = $this->model->getAll();
 			$this->view("post/list.php",
 				["post"=>$post,]);
@@ -16,6 +16,7 @@ require_once"controllers/BaseController.php";
 		}
 		function store(){
 			$data=$_POST;
+			$data['slug'] = $this->toSlug($data['title']);
 			$result = $this->model->Store($data);
 			if ($result) {
 				setcookie("msg","Tạo Mới Thành công",time() + 3);
@@ -49,6 +50,7 @@ require_once"controllers/BaseController.php";
 			$this->view("post/edit.php",["post"=>$post,]);
 		}
 		public function update(){
+			$data['slug'] = $this->toSlug($data['title']);
 			$data = $_POST;
 			$id = $_POST['id'];
 			
@@ -62,6 +64,7 @@ require_once"controllers/BaseController.php";
 			}
 			header("location:index.php?mod=post&act=list");
 		}
+		
 	}
 	
  ?>

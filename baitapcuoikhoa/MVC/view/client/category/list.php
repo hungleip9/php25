@@ -66,7 +66,7 @@
             <nav class="site-navigation" role="navigation">
               <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block mb-0">
                 <li><a href="index.php?c=category&mod=client&act=index" class="">Home</a></li>
-                <li><a href="index.php?c=auth&mod=admin&act=logout">Logout</a></li>
+                <li><a href="index.php?c=auth&mod=admin&act=login">Login</a></li>
                 <li class="d-none d-lg-inline-block"><a href="#" class="js-search-toggle"><span class="icon-search"></span></a></li>
               </ul>
             </nav>
@@ -153,7 +153,7 @@
               </div>
               
                 <p><?php echo $category['description']; ?></p>
-                <a style="border-radius: 10px; margin-bottom: 20px;" href="index.php?c=category&mod=client&act=detail&id=<?php echo $category['id']?>" class="btn btn-primary">Detail</a>
+                
                 
                 <hr>
               </div>

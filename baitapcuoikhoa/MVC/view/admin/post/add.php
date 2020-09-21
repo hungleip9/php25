@@ -16,50 +16,61 @@
 <body>
     <div class="container">
     <h3 align="center">DevMind - Education And Technology Group</h3>
-    <h3 align="center">Add New User</h3>
+    <h3 align="center">Add New Categories</h3>
     <hr>
-        <form action="index.php?mod=admin&c=post&act=store" method="POST" role="form" enctype="multipart/form-data">
-            <a href="index.php?mod=admin&c=home&act=index" class="btn btn-primary">BACK-TO-HOME</a>
+        <form action="index.php?c=post&mod=admin&act=store" method="POST" role="form" enctype="multipart/form-data">
+            <a href="index.php?c=post&mod=admin&act=index" class="btn btn-primary">BACK-TO-HOME</a>
             <div class="form-group">
-                <label for="">Title</label>
-                <input type="text" class="form-control" id="" placeholder="" name="title">
+                <label for="">Name</label>
+                <input type="text" class="form-control" id="" placeholder="" name="name">
             </div>
             <div class="form-group">
-                <label for="">Description</label>
-                <input type="text" class="form-control" id="" placeholder="" name="description">
+                <label for="">Tác Giả</label>
+                <input type="text" class="form-control" id="" placeholder="" name="tacGia">
             </div>
             <div class="form-group">
-                <label for="">Thumbnail</label>
-                <input type="text" class="form-control" id="" placeholder="" name="thumbnail">
+                <label for="">Parent_id</label>
+                <input type="text" class="form-control" id="" placeholder="" name="parent_id">
             </div>
             <div class="form-group">
                 <label for="">Content</label>
-                <input type="text" class="form-control" id="" placeholder="" name="content">
+                <input type="text" class="form-control" id="" placeholder="" name="thumbnail">
             </div>
             <div class="form-group">
                 <label for="">Slug</label>
                 <input type="text" class="form-control" id="" placeholder="" name="slug">
             </div>
             <div class="form-group">
-                <label for="">View_count</label>
-                <input type="text" class="form-control" id="" placeholder="" name="view_count">
-            </div>
-            <!-- <div class="form-group">
-                <label for="">User_id</label>
-                <input type="text" class="form-control" id="" placeholder="" name="user_id">
-            </div> -->
-            <div class="form-group">
-                <label for="">Category_id</label>
-                <input type="text" class="form-control" id="" placeholder="" name="category_id">
+                <label for="">Description</label>
+                <input type="text" class="form-control" id="" placeholder="" name="description">
             </div>
             <div class="form-group">
                 <label for="">Created_at</label>
                 <input type="date" class="form-control" id="" placeholder="" name="created_at">
             </div>
-
-            <button type="submit" class="btn btn-primary">Create</button>
+            <div class="form-group">
+                <label for="">Image</label>
+                <input type="file" class="form-control" id="" placeholder="" name="file">
+            </div>
+            <div class="form-group">
+                <label for="">Image2</label>
+                <input type="file" class="form-control" id="" placeholder="" name="file2">
+            </div>
+            <div class="form-group">
+                <label for="">Image3</label>
+                <input type="file" class="form-control" id="" placeholder="" name="file3">
+            </div>
+            <div class="form-group">
+                <label for="">Image4</label>
+                <input type="file" class="form-control" id="" placeholder="" name="file4">
+            </div>
+            <div class="form-group">
+                <label for="">Image5</label>
+                <input type="file" class="form-control" id="" placeholder="" name="file5">
+            </div>
+            <button class="btn btn-primary">ADD</button>
+            <a href="index.php?c=auth&mod=admin&act=logout">Logout</a>
         </form>
-        <a href="index.php?c=auth&mod=admin&act=logout">Logout</a>
     </div>
 </body>
 </html>

@@ -73,7 +73,19 @@ include_once "Connection.php";
 				$query .= $key . "=" . "'" . $value . "'" . ",";
 			}
 			$query = substr_replace($query, "", -1);
-			$query .= ",file='$link'".",file2='$link2'".",file3='$link3'".",file4='$link4'".",file5='$link5'"." WHERE id = " . $id;
+			if($link!=null){
+			$query .= ",file='$link'";
+			}if($link2!=null){
+			$query .= ",file2='$link2'";
+			}
+			if($link3!=null){
+			$query .= ",file3='$link3'";
+			}if($link4!=null){
+			$query .= ",file4='$link4'";
+			}if($link5!=null){
+			$query .= ",file5='$link5'";
+			}
+			$query.= " WHERE id = " . $id;
 			
 			$result = $this->conn->query($query);
 			return $result;

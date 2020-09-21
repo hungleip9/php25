@@ -13,6 +13,7 @@ class CategoryClientController extends AdminController{
 				["categories"=>$categories,]);
 		}
 	public function store(){
+			$data['slug'] = $this->toSlug($data['title']);
 			$data = $_POST;
 			
 			$result = $this->model->Store($data);
@@ -27,6 +28,7 @@ class CategoryClientController extends AdminController{
 			$this->view("client/category/edit.php",["category"=>$category,]);
 		}
 		public function update(){
+			$data['slug'] = $this->toSlug($data['title']);
 			$data = $_POST;
 			$id = $_POST['id'];
 			

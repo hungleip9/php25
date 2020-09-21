@@ -1,14 +1,4 @@
-<?php 
 
-	if($_SESSION['login']==true){
-		if ($username=='hung') {
-			header('Location: index.php?mod=admin&c=category&act=index');
-		}else{
-					header('Location: index.php?mod=client&c=category&act=index');
-				}
-		
-	}
- ?>
 <!DOCTYPE HTML>
 <html lang="zxx">
 

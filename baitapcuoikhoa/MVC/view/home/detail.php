@@ -44,7 +44,7 @@
           </div>
 
           <div class="col-4 site-logo">
-            <a href="index.html" class="text-black h2 mb-0">Nội Dung Bài Viết - ADMIN</a>
+            <a href="index.html" class="text-black h2 mb-0">Nội Dung Bài Viết</a>
           </div>
 
           <div class="col-8 text-right">
@@ -52,8 +52,8 @@
               <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block mb-0">
                 
                 
-                <li><a href="index.php?c=category&mod=admin&act=index" class="">Home</a></li>
-                <li><a href="index.php?c=auth&mod=admin&act=logout">Logout</a></li>
+                <li><a href="index.php?c=home&mod=client&act=index" class="">Home</a></li>
+                <li><a href="index.php?c=auth&mod=admin&act=login">Login</a></li>
                 <li class="d-none d-lg-inline-block"><a href="#" class="js-search-toggle"><span class="icon-search"></span></a></li>
               </ul>
             </nav>
@@ -87,7 +87,7 @@
           <div class="col-md-5 mr-auto order-md-1">
             <h2>Nội Dung Phim</h2>
             <p><?php echo $category['thumbnail']; ?></p>
-            <a style="border-radius: 10px; margin-bottom: 20px;" href="index.php?c=category&mod=admin&act=editnoidung&id=<?php echo $category['id']?>" class="btn btn-success">Edit</a>
+            
           </div>
         </div>
       </div>
@@ -98,7 +98,7 @@
         <div class="row mb-5 justify-content-center">
           <div class="col-md-5 text-center">           
             <h2>Ý Nghĩa Nhân Văn</h2>
-            <a style="border-radius: 10px; margin-bottom: 20px;" href="index.php?c=category&mod=admin&act=editYNghia&id=<?php echo $category['id']?>" class="btn btn-success">Edit</a>
+            
             <p><?php echo $category['ynghia1'] ?></p>
           </div>
         </div>
@@ -132,7 +132,7 @@
           </div>
           <div class="col-md-5 ml-auto">
             <h2>Cái Kết</h2>
-            <a style="border-radius: 10px; margin-bottom: 20px;" href="index.php?c=category&mod=admin&act=editCaiKet&id=<?php echo $category['id']?>" class="btn btn-success">Edit</a>
+            
             <p class="mb-4"><?php echo $category['thumbnail2'] ?></p>
           </div>
         </div>
@@ -162,7 +162,7 @@
   <script src="xuly/js/bootstrap-datepicker.min.js"></script>
   <script src="xuly/js/aos.js"></script>
 
-  <script src="js/main.js"></script>
+  <script src="xuly/js/main.js"></script>
 
  
   </body>
