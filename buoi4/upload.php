@@ -7,7 +7,7 @@
 		$upload = upload_file( 'uploads', 'image');
 
 		if ($upload) { // neu upload file khong co loi
-       	echo " uploaded thanh cong.";
+       	echo " $target_file ";
        	
        }else{//upload file co loi
        		echo "sorry, uploaded file that bai.";

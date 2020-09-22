@@ -1,19 +1,20 @@
 <?php 
 require_once "controllers/admin/AdminController.php";
 require_once"model/Category.php";
+require_once "model/Helper.php";
 require_once 'controllers/BaseController.php';
 class HomeAdminController extends AdminController{
 	protected $model;
 	function __construct(){
-			$this->model = new post();
+			$this->model = new Category();
 		}
 	public function index(){
-			$post=$this->model->getAll();
-			$this->view("admin/home/index.php",
-				["post"=>$post]);
+			$categories=$this->model->getAll();
+			$this->view("admin/home/list.php",
+				["categories"=>$categories,]);
 		}
 	public function store(){
-			$data = $_post;
+			$data = $_POST;
 			$targetDir = "xuly/images/";			
 			$fileName = basename($_FILES["file"]["name"]);
 			$fileName2 = basename($_FILES["file2"]["name"]);
@@ -39,36 +40,38 @@ class HomeAdminController extends AdminController{
 			$id=$_GET['id'];
 
 			
-			$post=$this->model->editpost($id);
-			$this->view("admin/home/edit.php",["post"=>$post,]);
+			$category=$this->model->editCategory($id);
+			$this->view("admin/home/edit.php",["category"=>$category,]);
 		}
 		public function editnoidung(){	
 			$id=$_GET['id'];
 
 			
-			$post=$this->model->editpost($id);
-			$this->view("admin/home/editnoidung.php",["post"=>$post,]);
+			$category=$this->model->editCategory($id);
+			$this->view("admin/home/editnoidung.php",["category"=>$category,]);
 		}
 		public function editYNghia(){	
 			$id=$_GET['id'];
 
 			
-			$post=$this->model->editpost($id);
-			$this->view("admin/home/editYNghia.php",["post"=>$post,]);
+			$category=$this->model->editCategory($id);
+			$this->view("admin/home/editYNghia.php",["category"=>$category,]);
 		}
 		public function editCaiKet(){	
 			$id=$_GET['id'];
 
 			
-			$post=$this->model->editpost($id);
-			$this->view("admin/home/editCaiKet.php",["post"=>$post,]);
+			$category=$this->model->editCategory($id);
+			$this->view("admin/home/editCaiKet.php",["category"=>$category,]);
 		}
 		public function update(){
+			$helper = new Helper();
+			$data = $_POST;
+			$data['slug'] = $data['name'];
+			$data['slug'] = $helper->to_slug($data['slug']);
 			$link=null;
-			$data = $_post;
-			$id = $_post['id'];
-			// var_dump($_FILES["file"]["name"]);
-			// die();
+			
+			$id = $_POST['id'];
 			$targetDir = "xuly/images/";
 			$fileName = isset($_FILES["file"]["name"]) ? basename($_FILES["file"]["name"]) : null;
 			$fileName2 = isset($_FILES["file2"]["name"]) ? basename($_FILES["file2"]["name"]) : null;
@@ -89,16 +92,16 @@ class HomeAdminController extends AdminController{
 			$upload4 = move_uploaded_file($_FILES["file4"]["tmp_name"], $link4);
 			$upload5 = move_uploaded_file($_FILES["file5"]["tmp_name"], $link5);
 			$result = $this->model->Update($data, $id,$link,$link2,$link3,$link4,$link5);
-			$this->redirect('c=home&mod=admin&act=index');
+			header("Location:index.php?mod=admin&act=detail&c=home&id=$id");
 		}
 		public function detail(){
 			$id=$_GET['id'];
 
 			
-			$post=$this->model->getId($id);
+			$category=$this->model->getId($id);
 
 			$this->view("admin/home/detail.php",
-				["post"=>$post,]);
+				["category"=>$category,]);
 		}
 		public function add(){
 
@@ -107,7 +110,7 @@ class HomeAdminController extends AdminController{
 		public function delete(){
 			$id=$_GET['id'];
 			
-			$categoies=$this->model->deletepost($id);
+			$categoies=$this->model->deleteCategory($id);
 			$this->redirect('c=home&mod=admin&act=index');
 		}
 	}

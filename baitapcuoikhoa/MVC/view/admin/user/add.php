@@ -67,7 +67,7 @@
           <i class="fas fa-user"></i>
           Avatar
         </label>
-        <input type="text" name="avatar" size="30" placeholder="Link...">
+        <input type="file" class="form-control" id="" placeholder="" name="file">
       </div>
       <div class="form-style-agile">
         <label>

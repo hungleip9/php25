@@ -36,7 +36,7 @@
             	<td><?php echo $user['email']; ?></td>
                 <td><?php echo $user['password']; ?></td>
             	<td>
-            		<img src="<?php echo $user['avatar']?>" alt="" style="width: 60px;">
+            		<img src="<?php echo $user['file']?>" alt="" style="width: 60px;">
             	</td>            	
             	<td><?php echo $user['created_at']; ?></td>
             	 <td>
@@ -60,7 +60,7 @@
             
             
         </table>
-        <a href="index.php?%20c=category&mod=admin&act=index" class="btn btn-primary">Back</a>
+        <a href="index.php?%20c=home&mod=admin&act=index" class="btn btn-primary">Back</a>
         <a href="index.php?c=auth&mod=admin&act=logout">Logout</a>
     </div>
 </body>

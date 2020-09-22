@@ -12,6 +12,10 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <!-- textsummer -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <!-- end text summer -->
     <style type="text/css">
         .input_content input{
             height: 200px;
@@ -23,13 +27,14 @@
     <h3 align="center">DevMind - Education And Technology Group</h3>
     <h3 align="center">UPDATE Category</h3>
     <hr>
-        <form action="index.php?c=category&mod=admin&act=update" method="POST" role="form" enctype="multipart/form-data">
+        <form action="index.php?c=home&mod=admin&act=update" method="POST" role="form" enctype="multipart/form-data">
             <input type="hidden" name="id" value="<?php echo $category['id'] ?>">
-            <a href="index.php?c=category&mod=admin&act=index" class="btn btn-primary">BACK-TO-HOME</a>
+            <a href="index.php?c=home&mod=admin&act=index" class="btn btn-primary">BACK-TO-HOME</a>
             
             <div class="form-group input_content">
                 <label for="">Cái kết</label>
-                <input type="text" class="form-control" id="" placeholder="" name="thumbnail2" value="<?php echo $category['thumbnail2'] ?>">
+                
+                <textarea class="form-control" id="summernote" name="thumbnail2" placeholder="<?php echo $category['thumbnail2'] ?>"></textarea>
             </div>
             
             
@@ -38,5 +43,16 @@
             
         </form>
     </div>
+    <!--  text summer -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <script>
+
+    $(document).ready(function() {
+      $('#summernote').summernote();
+    });
+</script>
+<!-- end text summer -->
 </body>
 </html>

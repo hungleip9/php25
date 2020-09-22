@@ -1,7 +1,9 @@
 <?php 
+
 	$mod = $_GET['mod'];//admin,client
 	$act = $_GET['act'];//action
 	$c = $_GET['c'];//controller
+
 	session_start();
 	
 

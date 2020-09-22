@@ -9,7 +9,7 @@ class HomeClientController extends AdminController{
 		}
 	public function index(){
 			$categories=$this->model->getAll();
-			$this->view("home/index.php",
+			$this->view("home/list.php",
 				["categories"=>$categories]);
 		}
 		public function detail(){

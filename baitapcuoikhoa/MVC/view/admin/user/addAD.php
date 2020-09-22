@@ -1,87 +1,43 @@
-<!DOCTYPE HTML>
-<html lang="zxx">
-
+<!DOCTYPE html>
+<html>
 <head>
-  <title>Login</title>
-  <!-- Meta tag Keywords -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="UTF-8" />
-  <meta name="keywords" content="Effect Login Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements"
-  />
-  <script>
-    addEventListener("load", function () {
-      setTimeout(hideURLbar, 0);
-    }, false);
-
-    function hideURLbar() {
-      window.scrollTo(0, 1);
-    }
-  </script>
-  <!-- Meta tag Keywords -->
-  <!-- css files -->
-  <link rel="stylesheet" href="Public/frontend/login/css/style.css" type="text/css" media="all" />
-  <!-- Style-CSS -->
-  <link rel="stylesheet" href="Public/frontend/login/css/fontawesome-all.css">
-  <!-- Font-Awesome-Icons-CSS -->
-  <!-- //css files -->
-  <!-- web-fonts -->
-  <link href="//fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
-  <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-  <!-- //web-fonts -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <title></title>
 </head>
-
 <body>
-  <!-- bg effect -->
-  <div id="bg">
-    <canvas></canvas>
-    <canvas></canvas>
-    <canvas></canvas>
-  </div>
-  <!-- //bg effect -->
-  <!-- title -->
-  <h1>Đăng Nhập</h1>
-  <!-- //title -->
-  <!-- content -->
-  <div class="sub-main-w3">
-    <form action="index.php?mod=admin&c=auth&act=checkLogin" method="post">
-      <h2>Login Now
-        <i class="fas fa-level-down-alt"></i>
-      </h2>
-      <div class="form-style-agile">
-        <label>
-          <i class="fas fa-user"></i>
-          Username
-        </label>
-        <?php foreach ($user as $user) { ?>
-        <input type="text" name="username" size="30" placeholder="$user['name']">
-        <?php } ?>
-      </div>
-      <!-- checkbox -->
-      
-      <!-- //checkbox -->
-      <input type="submit" id="success" value="Add Admin" name="btn_submit">
-    </form>
-  </div>
-  <!-- //content -->
-
-  <!-- copyright -->
-  <div class="footer">
-    <p>&copy;Design by
-      <a href="http://w3layouts.com">LQH</a>
-    </p>
-  </div>
-  <!-- //copyright -->
-
-  <!-- Jquery -->
-  <script src="Public/frontend/login/js/jquery-3.3.1.min.js"></script>
-  <!-- //Jquery -->
-
-  <!-- effect js -->
-  <script src="Public/frontend/login/js/canva_moving_effect.js"></script>
-  <!-- //effect js -->
-  
-
+    <?php 
+                include 'PHPMailer/class.smtp.php';
+                include 'PHPMailer/class.phpmailer.php'; 
+                $nFrom = "Hệ thống quản lý công văn, văn bản";    //mail duoc gui tu dau, thuong de ten cong ty ban
+                $mFrom = $user['email'];  //dia chi email cua ban 
+                
+                $nTo = 'Blog Phim'; //Ten nguoi nhan
+                $mTo =  "$email";   //dia chi nhan mail
+                $mail             = new PHPMailer();
+                $body             = "Bạn đã đăng ký thành công tài khoản tại blog phim";   // Noi dung email
+                $title = 'Đăng ký tài khoản';   //Tieu de gui mail
+                $mail->IsSMTP();             
+                $mail->CharSet  = "utf-8";
+                $mail->SMTPDebug  = 0;   // enables SMTP debug information (for testing)
+                $mail->SMTPAuth   = true;    // enable SMTP authentication
+                $mail->SMTPSecure = "ssl";   // sets the prefix to the servier
+                $mail->Host       = "smtp.gmail.com";    // sever gui mail.
+                $mail->Port       = 465;         // cong gui mail de nguyen
+                // xong phan cau hinh bat dau phan gui mail
+                $mail->Username   = $mFrom;  // khai bao dia chi email
+                
+                $mail->SetFrom($mFrom, $nFrom);
+                $mail->AddReplyTo('admin@quanlycongvankgu.tk', 'Admin'); //khi nguoi dung phan hoi se duoc gui den email nay
+                $mail->Subject    = $title;// tieu de email 
+                $mail->MsgHTML($body);// noi dung chinh cua mail se nam o day.
+                $mail->AddAddress($mTo, $nTo);
+                // thuc thi lenh gui mail 
+                if(!$mail->Send()) {
+                    echo '<p> Có lỗi trong quá trình gửi mail! Vui lòng thử lại!</p>';
+                     
+                } else {
+                     
+                    echo "<p>Mật khẩu mới của bạn đã được gửi qua email: $email .<br /> Vui lòng kiểm tra và đăng nhập lại hệ thống!</p> ";
+                }
+    ?>
 </body>
-
 </html>

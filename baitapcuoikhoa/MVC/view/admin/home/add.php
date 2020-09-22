@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>DevMind - Education And Technology Group</title>
+    <title>Thêm bài viết</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
@@ -17,35 +17,35 @@
 </head>
 <body>
     <div class="container">
-    <h3 align="center">DevMind - Education And Technology Group</h3>
-    <h3 align="center">Add New Categories</h3>
+    <h3 align="center">Thêm bài viết</h3>
+    
     <hr>
-        <form action="index.php?c=category&mod=admin&act=store" method="POST" role="form" enctype="multipart/form-data">
-            <a href="index.php?c=category&mod=admin&act=index" class="btn btn-primary">BACK-TO-HOME</a>
+        <form action="index.php?c=home&mod=admin&act=store" method="POST" role="form" enctype="multipart/form-data">
+            <a href="index.php?c=home&mod=admin&act=index" class="btn btn-primary">BACK-TO-HOME</a>
             <div class="form-group">
                 <label for="">Name</label>
                 <input type="text" class="form-control" id="" placeholder="" name="name">
+                <textarea class="form-control" id="summernote3" name="name"></textarea>
             </div>
             <div class="form-group">
                 <label for="">Tác Giả</label>
                 <input type="text" class="form-control" id="" placeholder="" name="tacGia">
+
             </div>
-            <div class="form-group">
-                <label for="">Parent_id</label>
-                <input type="text" class="form-control" id="" placeholder="" name="parent_id">
-            </div>
+            
             <div class="form-group">
                 <label for='tf6'>Content</label>
                 <textarea class="form-control" id="summernote" name="thumbnail"></textarea>
                 
             </div>
             <div class="form-group">
-                <label for="">Slug</label>
-                <input type="text" class="form-control" id="" placeholder="" name="slug">
+                <label for="">Đạo Diễn</label>
+                <input type="text" class="form-control" id="" placeholder="" name="daoDien">
             </div>
             <div class="form-group">
                 <label for="">Description</label>
                 <input type="text" class="form-control" id="" placeholder="" name="description">
+                <textarea class="form-control" id="summernote4" name="description"></textarea>
             </div>
             <div class="form-group">
                 <label for="">Created_at</label>
@@ -82,6 +82,8 @@
 
     $(document).ready(function() {
       $('#summernote').summernote();
+      $('#summernote3').summernote();
+      $('#summernote4').summernote();
     });
 </script>
 </body>

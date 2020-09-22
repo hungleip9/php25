@@ -19,12 +19,12 @@ class AuthAdminController extends BaseController{
 				
 			}else{
 				$_SESSION['login'] = false;
-				echo "Mat khau khong dung";
+				setcookie("error", "Mat Khau Khong Dung", time() + 3);
 				header('Location:index.php?c=home&mod=client&act=index');
 			}
 		}else{
 			$_SESSION['login'] = false;
-			echo "tai khoan khong dung";
+			setcookie("error", "Tai Khoan Khong Dung", time() + 3);
 			header('Location:index.php?c=home&mod=client&act=index');
 		}
 	}

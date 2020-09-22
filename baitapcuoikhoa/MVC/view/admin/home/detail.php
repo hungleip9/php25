@@ -2,22 +2,9 @@
 <html lang="en">
   <head>
     <title>Nội Dung Bài Viết</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700|Playfair+Display:400,700,900" rel="stylesheet">
-
-    <link rel="stylesheet" href="xuly/fonts/icomoon/style.css">
-    <link rel="stylesheet" href="xuly/css/bootstrap.min.css">
-    <link rel="stylesheet" href="xuly/css/magnific-popup.css">
-    <link rel="stylesheet" href="xuly/css/jquery-ui.css">
-    <link rel="stylesheet" href="xuly/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="xuly/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="xuly/css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="xuly/fonts/flaticon/font/flaticon.css">
-    <link rel="stylesheet" href="xuly/css/aos.css">
-
-    <link rel="stylesheet" href="xuly/css/style3.css">
+    <?php 
+      require_once "view/public/header.php";
+    ?>
   </head>
   <body>
   
@@ -52,8 +39,8 @@
               <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block mb-0">
                 
                 
-                <li><a href="index.php?c=category&mod=admin&act=index" class="">Home</a></li>
-                <li><a href="index.php?c=auth&mod=admin&act=logout">Logout</a></li>
+                <li><a href="index.php?c=home&mod=admin&act=index" class="">Trang Chủ</a></li>
+                <li><a href="index.php?c=auth&mod=admin&act=logout">Đăng Xuất</a></li>
                 <li class="d-none d-lg-inline-block"><a href="#" class="js-search-toggle"><span class="icon-search"></span></a></li>
               </ul>
             </nav>
@@ -64,7 +51,7 @@
     </header>
     
     
-    <div class="site-cover site-cover-sm same-height overlay single-page" style="background-image: url('<?php echo $category['file']?>');">
+    <div class="site-cover site-cover-sm same-height overlay single-page wow bounceInRight" style="background-image: url('<?php echo $category['file']?>');">
       <div class="container">
         <div class="row same-height justify-content-center">
           <div class="col-md-12 col-lg-10">
@@ -82,12 +69,12 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 order-md-2">
-            <img src="<?php echo $category['file2']?>" alt="Image" class="img-fluid">
+            <img src="<?php echo $category['file2']?>" alt="Image" class="img-fluid wow bounceInRight">
           </div>
           <div class="col-md-5 mr-auto order-md-1">
             <h2>Nội Dung Phim</h2>
-            <p><?php echo $category['thumbnail']; ?></p>
-            <a style="border-radius: 10px; margin-bottom: 20px;" href="index.php?c=category&mod=admin&act=editnoidung&id=<?php echo $category['id']?>" class="btn btn-success">Edit</a>
+            <p class="wow bounceInLeft"><?php echo $category['thumbnail']; ?></p>
+            <a style="border-radius: 10px; margin-bottom: 20px;" href="index.php?c=home&mod=admin&act=editnoidung&id=<?php echo $category['id']?>" class="btn btn-success">Edit</a>
           </div>
         </div>
       </div>
@@ -98,27 +85,27 @@
         <div class="row mb-5 justify-content-center">
           <div class="col-md-5 text-center">           
             <h2>Ý Nghĩa Nhân Văn</h2>
-            <a style="border-radius: 10px; margin-bottom: 20px;" href="index.php?c=category&mod=admin&act=editYNghia&id=<?php echo $category['id']?>" class="btn btn-success">Edit</a>
-            <p><?php echo $category['ynghia1'] ?></p>
+            <a style="border-radius: 10px; margin-bottom: 20px;" href="index.php?c=home&mod=admin&act=editYNghia&id=<?php echo $category['id']?>" class="btn btn-success">Edit</a>
+            <p class="wow bounceInUp"><?php echo $category['ynghia1'] ?></p>
           </div>
         </div>
         <div class="row boicanh">
           <div class="col-md-12 col-lg-12 mb-12 text-left">
-            <img src="<?php echo $category['file3']?>" alt="Image" style="float: left;">
+            <img src="<?php echo $category['file3']?>" alt="Image" style="float: left" class="wow bounceInLeft">
             <h2 class="mb-3 h5">Bối Cảnh</h2>
-            <p><?php echo $category['ynghia2'] ?></p>
+            <p class="wow bounceInRight"><?php echo $category['ynghia2'] ?></p>
           </div>
 
           <div class="col-md-12 col-lg-12 mb-12 text-left">
-            <img src="<?php echo $category['file4']?>" alt="Image" style="float: right; padding-left: 5px;">
+            <img src="<?php echo $category['file4']?>" alt="Image" style="float: right; padding-left: 5px;" class="wow bounceInRight">
             <h2 class="mb-3 h5">Diễn Biến</h2>
-            <p><?php echo $category['ynghia3'] ?></p>
+            <p class="wow bounceInLeft"><?php echo $category['ynghia3'] ?></p>
           </div>
 
           <div class="col-md-12 col-lg-12 mb-12 text-left">
-            <img src="<?php echo $category['file5']?>" alt="Image" style="float: left;">
+            <img src="<?php echo $category['file5']?>" alt="Image" style="float: left;" class="wow bounceInLeft">
             <h2 class="mb-3 h5">Nhân Vật</h2>
-            <p><?php echo $category['ynghia4'] ?></p>
+            <p class="wow bounceInRight"><?php echo $category['ynghia4'] ?></p>
           </div>
         </div>
       </div>
@@ -127,43 +114,22 @@
     <div class="site-section">
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
-            <img src="<?php echo $category['file']?>" alt="Image" class="img-fluid">
+          <div class="col-md-5">
+            <img src="<?php echo $category['file']?>" alt="Image" class="img-fluid wow bounceInLeft">
           </div>
-          <div class="col-md-5 ml-auto">
+          <div class="col-md-6 ml-auto  wow bounceInRight">
             <h2>Cái Kết</h2>
-            <a style="border-radius: 10px; margin-bottom: 20px;" href="index.php?c=category&mod=admin&act=editCaiKet&id=<?php echo $category['id']?>" class="btn btn-success">Edit</a>
+            <a style="border-radius: 10px; margin-bottom: 20px;" href="index.php?c=home&mod=admin&act=editCaiKet&id=<?php echo $category['id']?>" class="btn btn-success">Edit</a>
             <p class="mb-4"><?php echo $category['thumbnail2'] ?></p>
           </div>
         </div>
       </div>
-      <audio controls class="audio">
-
-        <source src="xuly/audio/tudo.mp3" type="audio/mpeg" >
-
-        </audio>
     </div>
     
     <?php 
       require_once "view/public/footer.php";
     ?>
     
-  </div>
-
-  <script src="xuly/js/jquery-3.3.1.min.js"></script>
-  <script src="xuly/js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="xuly/js/jquery-ui.js"></script>
-  <script src="xuly/js/popper.min.js"></script>
-  <script src="xuly/js/bootstrap.min.js"></script>
-  <script src="xuly/js/owl.carousel.min.js"></script>
-  <script src="xuly/js/jquery.stellar.min.js"></script>
-  <script src="xuly/js/jquery.countdown.min.js"></script>
-  <script src="xuly/js/jquery.magnific-popup.min.js"></script>
-  <script src="xuly/js/bootstrap-datepicker.min.js"></script>
-  <script src="xuly/js/aos.js"></script>
-
-  <script src="js/main.js"></script>
-
- 
+  </div> 
   </body>
 </html>

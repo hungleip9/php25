@@ -49,9 +49,39 @@
         </div>
       </div>
     </div>
+      <div class="back-to-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
     
  
 
 
   </body>
+  <script src="xuly/js/jquery-3.3.1.min.js"></script>
+  <script src="xuly/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="xuly/js/jquery-ui.js"></script>
+  <script src="xuly/js/popper.min.js"></script>
+  <script src="xuly/js/bootstrap.min.js"></script>
+  <script src="xuly/js/owl.carousel.min.js"></script>
+  <script src="xuly/js/jquery.stellar.min.js"></script>
+  <script src="xuly/js/jquery.countdown.min.js"></script>
+  <script src="xuly/js/jquery.magnific-popup.min.js"></script>
+  <script src="xuly/js/bootstrap-datepicker.min.js"></script>
+  <script src="xuly/js/aos.js"></script>
+
+  <script src="js/main.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($) {
+      $(window).scroll(function(event){
+      var pos_body = $('html,body').scrollTop();
+      if(pos_body>100){
+        $('.back-to-top').addClass('hien-ra');
+      }else{
+        $('.back-to-top').removeClass('hien-ra');
+      }
+      
+    });
+    $('.back-to-top').click(function(){
+      $('html, body').animate({scrollTop : 0}, 800);
+    });
+    });
+  </script>
 </html>
