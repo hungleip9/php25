@@ -24,7 +24,7 @@
             <a href="index.php?c=home&mod=admin&act=index" class="btn btn-primary">BACK-TO-HOME</a>
             <div class="form-group">
                 <label for="">Name</label>
-                <input type="text" class="form-control" id="" placeholder="" name="name">
+                
                 <textarea class="form-control" id="summernote3" name="name"></textarea>
             </div>
             <div class="form-group">
@@ -44,7 +44,7 @@
             </div>
             <div class="form-group">
                 <label for="">Description</label>
-                <input type="text" class="form-control" id="" placeholder="" name="description">
+                
                 <textarea class="form-control" id="summernote4" name="description"></textarea>
             </div>
             <div class="form-group">
