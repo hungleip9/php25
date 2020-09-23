@@ -29,10 +29,7 @@
                 <label for="">Email</label>
                 <input type="text" class="form-control" id="" placeholder="" name="email" value="<?php echo $user['email'] ?>">
             </div>
-            <div class="form-group">
-                <label for="">Avatar</label>
-                <input type="text" class="form-control" id="" placeholder="" name="avatar" value="<?php echo $user['avatar'] ?>">
-            </div>
+            
             <div class="form-group">
                 <label for="">Created_at</label>
                 <input type="date" class="form-control" id="" placeholder="" name="created_at" value="<?php echo $user['created_at'] ?>">

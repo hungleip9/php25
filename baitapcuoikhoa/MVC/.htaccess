@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteRule  "BlogPhim" "index.php?c=home&mod=client&act=index"
+RewriteRule  "DangNhap" "index.php?c=auth&mod=admin&act=login"
+RewriteRule  "UserAdmin" "index.php?mod=admin&c=home&act=index"
+RewriteRule  "AddBaiViet" "index.php?c=home&mod=admin&act=add"
+RewriteRule  "QuanLyThanhVien" "index.php?c=user&mod=admin&act=index"
+RewriteRule  "QuanLyBaiViet" "index.php?c=category&mod=admin&act=index"
+RewriteRule  "AddUser" "index.php?mod=admin&c=user&act=add"

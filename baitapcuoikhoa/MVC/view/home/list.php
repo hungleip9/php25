@@ -52,8 +52,8 @@
           <div class="col-8 text-right">
             <nav class="site-navigation" role="navigation">
               <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block mb-0">
-                <li><a href="index.php?c=home&mod=client&act=index" class="">Trang Chủ</a></li>
-                <li><a href="index.php?c=auth&mod=admin&act=login">Đăng Nhập</a></li>
+                <li><a href="BlogPhim" class="">Trang Chủ</a></li>
+                <li><a href="DangNhap">Đăng Nhập</a></li>
                 <li class="d-none d-lg-inline-block"><a href="#" class="js-search-toggle"><span class="icon-search"></span></a></li>
               </ul>
             </nav>
@@ -129,7 +129,7 @@
             <div class="entry2" style="text-align: center;">
               <a href="index.php?c=home&mod=client&act=detail&id=<?php echo $category['id']?>"><img style="width: 50%;" src="<?php echo $category['file'];?>" alt="Image" class="img-fluid rounded wow bounceInRight"></a>
               <div class="excerpt wow bounceInLeft">
-              <span class="post-category text-white bg-secondary mb-3"><?php echo $category['slug']; ?></span>
+              <span class="post-category text-white bg-secondary mb-3"><?php echo $category['daoDien']; ?></span>
             
               <h2><a href="single.html"><?php echo $category['name']; ?></a></h2>
             

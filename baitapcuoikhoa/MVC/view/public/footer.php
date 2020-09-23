@@ -50,6 +50,7 @@
       </div>
     </div>
       <div class="back-to-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
+      
     
  
 
@@ -70,6 +71,46 @@
   <script src="js/main.js"></script>
   <script type="text/javascript">
     jQuery(document).ready(function($) {
+
+      $('.btn12').on('click', function(){
+    var name = $('#name').val();
+    
+    var email = $('#email').val();
+    
+    function validateEmail(Email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(Email).toLowerCase());
+    }
+   
+    if ( name == "") {
+      $('#erroname').html('bạn chưa nhập đầy đủ tên');
+      return;
+    }
+    else if($('#Name').val().length <= 8){
+      $('#erroname').html('bạn phải nhập lớn hơn 8 ký tự');
+      return;
+    }
+    else{
+      $('#erroname').html(null);
+    }
+    
+    
+    if ( email == "") {
+      $('#erroemail').html('bạn chưa nhập đầy đủ email');
+    }
+    else if (!validateEmail(Email.value)) {
+        Email.nextElementSibling.innerHTML = "Yêu cầu nhập đúng định dạng của email";
+        return;
+    }
+    else{
+      $('#erroemail').html(null);
+    }
+        
+
+  });
+
+    // back to top
+    
       $(window).scroll(function(event){
       var pos_body = $('html,body').scrollTop();
       if(pos_body>100){
@@ -82,6 +123,11 @@
     $('.back-to-top').click(function(){
       $('html, body').animate({scrollTop : 0}, 800);
     });
-    });
+    
+
+    // end back to top
+    
+    
+});       
   </script>
 </html>

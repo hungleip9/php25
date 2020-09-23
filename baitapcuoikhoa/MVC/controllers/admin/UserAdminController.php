@@ -17,6 +17,23 @@ class UserAdminController extends AdminController{
 			$this->view("admin/user/add.php");
 		}
 		function store(){
+			if(empty($_POST['name'])){
+				setcookie("msg1","Bạn Chưa Nhập User Name",time() + 3);
+				$this->redirect('c=user&mod=admin&act=add');
+			}
+			if(empty($_POST['password'])){
+				setcookie("msg2","Bạn Chưa Nhập Pass Word",time() + 3);
+				$this->redirect('c=user&mod=admin&act=add');
+			}
+			if(empty($_POST['email'])){
+				setcookie("msg3","Bạn Chưa Nhập Email",time() + 3);
+				$this->redirect('c=user&mod=admin&act=add');
+			}
+			if(empty($_POST['created_at'])){
+				setcookie("msg4","Bạn Chưa Nhập CREATED_AT",time() + 3);
+				$this->redirect('c=user&mod=admin&act=add');
+			}
+			else{
 			$data = $_POST;
 			$email=$_POST['email'];
 			$name=$_POST['name'];  
@@ -40,12 +57,13 @@ class UserAdminController extends AdminController{
 			$result = $this->model->Store($data,$link,$link2,$link3,$link4,$link5);
 			$result2 =$this->model->send_email($email,$name);
 			
-			if ($result) {
-				setcookie("msg","Tạo Mới Thành công",time() + 3);
+				if ($result) {
+				setcookie("msgok","Tạo Mới Thành công",time() + 3);
 				$this->redirect('c=auth&mod=admin&act=login');
-			}else{
-				setcookie("msg","Tạo Mới Thất Bại",time() + 3);
+				}else{
+				setcookie("msg6","Tạo Mới Thất Bại",time() + 3);
 				$this->redirect('c=user&mod=admin&act=add');
+				}
 			}
 		}
 		function detail(){

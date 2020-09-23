@@ -33,6 +33,15 @@
 </head>
 
 <body>
+  <?php 
+  $msg1="";
+  if (isset($_COOKIE['msg1'])) {
+    $msg1=$_COOKIE['msg1'];
+  }$msg2="";
+  if (isset($_COOKIE['msg2'])) {
+    $msg2=$_COOKIE['msg2'];
+  }
+   ?>
   <!-- bg effect -->
   <div id="bg">
     <canvas></canvas>
@@ -55,6 +64,7 @@
           Username
         </label>
         <input type="text" name="username" size="30" placeholder="Username">
+        <p style="color: red"><?php echo $msg2; ?></p>
       </div>
       <div class="form-style-agile">
         <label>
@@ -62,6 +72,7 @@
           Password
         </label>
         <input type="password" name="password" size="30" placeholder="Password">
+        <p style="color: red"><?php echo $msg1; ?></p>
       </div>
       <!-- checkbox -->
       <div class="wthree-text">
@@ -73,12 +84,14 @@
             </label>
           </li>
           <li>
-            <a href="index.php?mod=admin&c=user&act=add">Sign up</a>
+            <a href="AddUser">SignUp</a>
+            <a href="BlogPhim" style="color: yellow;"> Back </a>
           </li>
         </ul>
       </div>
       <!-- //checkbox -->
       <input type="submit" id="success" value="Log In" name="btn_submit">
+      
     </form>
   </div>
   <!-- //content -->

@@ -32,6 +32,38 @@
 </head>
 
 <body>
+  <?php 
+    $msg1="";
+    $msg1_1="";
+    $msg2="";
+    $msg2_2="";
+    $msg3="";
+    $msg4="";
+    $msgok="";
+    $msg6="";
+    if (isset($_COOKIE['msg1'])) {
+        $msg1=$_COOKIE['msg1'];
+    }
+    if (isset($_COOKIE['msg1_1'])) {
+        $msg1_1=$_COOKIE['msg1_1'];
+    }
+    if (isset($_COOKIE['msg2'])) {
+        $msg2=$_COOKIE['msg2'];
+    }
+    if (isset($_COOKIE['msg2_2'])) {
+        $msg2_2=$_COOKIE['msg2_2'];
+    }
+    if (isset($_COOKIE['msg3'])) {
+        $msg3=$_COOKIE['msg3'];
+    }
+    if (isset($_COOKIE['msg4'])) {
+        $msg4=$_COOKIE['msg4'];
+    }
+    if (isset($_COOKIE['msg6'])) {
+        $msg6=$_COOKIE['msg6'];
+    }
+
+   ?>
   <!-- bg effect -->
   <div id="bg">
     <canvas></canvas>
@@ -48,12 +80,14 @@
       <h2>Sign up
         <i class="fas fa-level-down-alt"></i>
       </h2>
+      
       <div class="form-style-agile">
         <label>
           <i class="fas fa-user"></i>
           Username
         </label>
         <input type="text" name="name" size="30" placeholder="Username">
+        <p style="color: red"><?php echo $msg1; ?></p>
       </div>
       <div class="form-style-agile">
         <label>
@@ -61,6 +95,7 @@
           Email
         </label>
         <input type="text" name="email" size="30" placeholder="Email">
+        <p style="color: red"><?php echo $msg3; ?></p>
       </div>
       <div class="form-style-agile">
         <label>
@@ -75,6 +110,7 @@
           Password
         </label>
         <input type="password" name="password" size="30" placeholder="*******">
+        <p style="color: red"><?php echo $msg2; ?></p>       
       </div>
       <div class="form-style-agile">
         <label>
@@ -82,6 +118,7 @@
           Created_at
         </label>
         <input type="date" name="created_at" size="30" placeholder="Created_at">
+        <p style="color: red"><?php echo $msg4; ?></p>
       </div>
       <!-- checkbox -->
       <div class="wthree-text">

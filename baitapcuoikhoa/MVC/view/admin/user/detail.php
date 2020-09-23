@@ -18,7 +18,7 @@
             <li>Id : <?php echo $user['id']; ?></li>
             <li>Name : <?php echo $user['name']; ?></li>
             <li>Email : <?php echo $user['email']; ?></li>
-            <li>Avatar : <?php echo $user['avatar'] ?></li>
+            
             <li>Created : <?php echo $user['created_at'] ?></li>
             
         </ul>

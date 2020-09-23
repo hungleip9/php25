@@ -88,10 +88,10 @@
               <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block mb-0">
                
                 
-                <li><a href="index.php?c=home&mod=admin&act=index">Trang Chủ</a></li>
-                <li><a href="index.php?c=category&mod=admin&act=index">Quản lý bài viết</a></li>
-                <li><a href="index.php?c=user&mod=admin&act=index">Quản lý thành viên</a></li>
-                <li><a href="index.php?c=home&mod=admin&act=add">Thêm bài viết</a></li>
+                <li><a href="UserAdmin">Trang Chủ</a></li>
+                <li><a href="QuanLyBaiViet">Quản lý bài viết</a></li>
+                <li><a href="QuanLyThanhVien">Quản lý thành viên</a></li>
+                <li><a href="AddBaiViet">Thêm bài viết</a></li>
                 <li><a href="index.php?c=auth&mod=admin&act=logout">Đăng Xuất</a></li>
                 <li class="d-none d-lg-inline-block"><a href="#" class="js-search-toggle"><span class="icon-search"></span></a></li>
               </ul>

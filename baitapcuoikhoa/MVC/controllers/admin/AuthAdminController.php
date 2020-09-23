@@ -15,22 +15,22 @@ class AuthAdminController extends BaseController{
 		if ($user) {
 			if($user['password']==$password){
 				$_SESSION['login'] = true;
-				header('Location: index.php?mod=admin&c=home&act=index');
+				header('Location: UserAdmin');
 				
 			}else{
 				$_SESSION['login'] = false;
-				setcookie("error", "Mat Khau Khong Dung", time() + 3);
-				header('Location:index.php?c=home&mod=client&act=index');
+				setcookie("msg1", "Mat Khau Khong Dung", time() + 3);
+				header('Location:DangNhap');
 			}
 		}else{
 			$_SESSION['login'] = false;
-			setcookie("error", "Tai Khoan Khong Dung", time() + 3);
-			header('Location:index.php?c=home&mod=client&act=index');
+			setcookie("msg2", "Tai Khoan Khong Dung", time() + 3);
+			header('Location:DangNhap');
 		}
 	}
 	public function logout(){
 		$_SESSION['login'] = false;
-		header('Location:index.php?c=home&mod=client&act=index');
+		header('Location:BlogPhim');
 	}
 }
 	

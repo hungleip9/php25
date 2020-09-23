@@ -16,7 +16,7 @@
 <body>
     <div class="container">
         <h3 class="text-center">--- CATEGORIES ---</h3>
-        <a href="index.php?c=home&mod=admin&act=index" 
+        <a href="UserAdmin" 
         class="btn btn-primary">Back</a>
         <table class="table">
             <thead>

@@ -16,7 +16,7 @@
 <body>
     <div class="container">
         <h3 class="text-center">--- USER ---</h3>
-        <a href="index.php?mod=admin&c=user&act=add" class="btn btn-primary">Add New User</a>
+        <a href="AddUser" class="btn btn-primary">Add New User</a>
         <table class="table">
             <thead>
                 <th>ID</th>

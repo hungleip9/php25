@@ -21,7 +21,7 @@
     
     <hr>
         <form action="index.php?c=home&mod=admin&act=store" method="POST" role="form" enctype="multipart/form-data">
-            <a href="index.php?c=home&mod=admin&act=index" class="btn btn-primary">BACK-TO-HOME</a>
+            <a href="UserAdmin" class="btn btn-primary">BACK-TO-HOME</a>
             <div class="form-group">
                 <label for="">Name</label>
                 
